@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | My Baby And I</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<div class="page-header">
+  <span class="eyebrow" style="color:var(--sand);">Reach Out</span>
+  <h1>Contact Us</h1>
+  <p>We'd love to hear from you — whether you're a new member, a volunteer, a donor, or a potential partner.</p>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;">
+
+      <!-- Contact Info -->
+      <div class="fade-up">
+        <span class="eyebrow">Get in Touch</span>
+        <h2 style="margin-top:0.5rem;margin-bottom:1.5rem;">We're Here For You</h2>
+
+        <div style="display:flex;flex-direction:column;gap:2rem;">
+          <div style="display:flex;gap:1.2rem;align-items:flex-start;">
+            <div style="font-size:1.8rem;margin-top:0.1rem;">📧</div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:info@mybabyandi.co.uk" style="color:var(--terracotta);font-size:0.95rem;">info@mybabyandi.co.uk</a>
+              <p style="font-size:0.85rem;margin-top:0.2rem;color:#888;">We aim to reply within 2 working days.</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:1.2rem;align-items:flex-start;">
+            <div style="font-size:1.8rem;margin-top:0.1rem;">📍</div>
+            <div>
+              <h4>Areas We Serve</h4>
+              <p style="font-size:0.95rem;">Glasgow City &amp; Renfrewshire Council</p>
+              <p style="font-size:0.85rem;margin-top:0.2rem;color:#888;">We run activities across both areas. Specific venues shared upon registration.</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:1.2rem;align-items:flex-start;">
+            <div style="font-size:1.8rem;margin-top:0.1rem;">🕐</div>
+            <div>
+              <h4>Office Hours</h4>
+              <p style="font-size:0.95rem;">Monday – Friday: 9am – 5pm</p>
+              <p style="font-size:0.85rem;margin-top:0.2rem;color:#888;">We are a community-led team. Response times may vary.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:3rem;padding:1.5rem;background:var(--cream);border-left:4px solid var(--terracotta);">
+          <h4>Are You a New Member?</h4>
+          <p style="font-size:0.9rem;margin-top:0.5rem;">If you're looking to join our community, simply fill in the form and select "Joining as a member" — we'll be in touch with a warm welcome.</p>
+        </div>
+
+        <div style="margin-top:1.5rem;padding:1.5rem;background:var(--light-sage);border-left:4px solid var(--olive);">
+          <h4>Media &amp; Press Enquiries</h4>
+          <p style="font-size:0.9rem;margin-top:0.5rem;">For media enquiries, please email <a href="mailto:info@mybabyandi.co.uk?subject=Media Enquiry" style="color:var(--terracotta);">info@mybabyandi.co.uk</a> with the subject line "Media Enquiry".</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="fade-up" style="background:var(--cream);padding:2.5rem;border:1.5px solid rgba(59,35,20,0.1);">
+        <h3 style="margin-bottom:1.5rem;">Send Us a Message</h3>
+        <form onsubmit="handleSubmit(event)">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" placeholder="First name" required/>
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" placeholder="Last name" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="your@email.com" required/>
+          </div>
+          <div class="form-group">
+            <label for="reason">Reason for Contact</label>
+            <select id="reason">
+              <option>Joining as a member</option>
+              <option>Volunteering</option>
+              <option>Making a donation</option>
+              <option>Corporate partnership</option>
+              <option>Clothing donation</option>
+              <option>Event registration</option>
+              <option>General enquiry</option>
+              <option>Media / Press</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" placeholder="Tell us a little about yourself or your enquiry..." required></textarea>
+          </div>
+          <div class="form-group" style="display:flex;align-items:flex-start;gap:0.75rem;">
+            <input type="checkbox" id="consent" required style="margin-top:4px;width:auto;"/>
+            <label for="consent" style="font-size:0.82rem;font-weight:400;text-transform:none;letter-spacing:0;color:#555;">I consent to My Baby And I storing my details to respond to this enquiry. We will never share your data with third parties.</label>
+          </div>
+          <button type="submit" class="btn btn--primary" style="width:100%;margin-top:0.5rem;">Send Message →</button>
+        </form>
+        <div id="form-success" style="display:none;margin-top:1.5rem;padding:1.2rem;background:var(--light-sage);border-left:4px solid var(--olive);border-radius:2px;">
+          <strong>✅ Message sent!</strong><br/>
+          <span style="font-size:0.9rem;">Thank you for reaching out. We'll be in touch within 2 working days at <strong id="confirm-email"></strong>.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const email = document.getElementById('email').value;
+  document.getElementById('confirm-email').textContent = email;
+  document.getElementById('form-success').style.display = 'block';
+  e.target.style.display = 'none';
+}
+</script>
+
+<div id="footer-placeholder"></div>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
