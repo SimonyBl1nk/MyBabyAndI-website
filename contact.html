@@ -65,7 +65,8 @@
       <!-- Contact Form -->
       <div class="fade-up" style="background:var(--cream);padding:2.5rem;border:1.5px solid rgba(59,35,20,0.1);">
         <h3 style="margin-bottom:1.5rem;">Send Us a Message</h3>
-        <form onsubmit="handleSubmit(event)">
+        <form action="https://formspree.io/f/mjgzvypo"
+      method="POST">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
             <div class="form-group">
               <label for="fname">First Name</label>
@@ -111,16 +112,6 @@
     </div>
   </div>
 </section>
-
-<script>
-function handleSubmit(e) {
-  e.preventDefault();
-  const email = document.getElementById('email').value;
-  document.getElementById('confirm-email').textContent = email;
-  document.getElementById('form-success').style.display = 'block';
-  e.target.style.display = 'none';
-}
-</script>
 
 <div id="footer-placeholder"></div>
 <script src="js/components.js"></script>
