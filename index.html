@@ -6,88 +6,130 @@
   <title>My Baby And I | Community Association — Glasgow &amp; Renfrewshire</title>
   <meta name="description" content="Empowering women from ethnically diverse backgrounds in Glasgow and Renfrewshire. Building confidence, accessing employment, and thriving through peer support."/>
   <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .hero-section {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+    .slider { position: absolute; inset: 0; z-index: 1; }
+    .slide {
+      position: absolute; inset: 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center 25%;
+      opacity: 0;
+      transition: opacity 1.4s ease-in-out;
+    }
+    .slide.active { opacity: 1; }
+
+    /* On mobile push photo UP so faces show */
+    @media (max-width: 768px) {
+      .slide { background-position: center 8%; }
+    }
+
+    /* Overlay: solid dark on mobile, fades right on desktop */
+    .hero-overlay {
+      position: absolute; inset: 0; z-index: 2;
+      background: rgba(25, 15, 8, 0.70);
+    }
+    @media (min-width: 769px) {
+      .hero-overlay {
+        background: linear-gradient(
+          to right,
+          rgba(25,15,8,0.82) 0%,
+          rgba(25,15,8,0.58) 50%,
+          rgba(25,15,8,0.22) 100%
+        );
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 9rem 2rem 5rem;
+    }
+    .hero-content h1 { color: var(--cream); max-width: 640px; margin-bottom: 0.75rem; }
+    .hero-content h1 em { color: var(--sand); font-style: italic; }
+    .hero-tagline {
+      font-style: italic; color: var(--sand);
+      font-size: 1.05rem; margin-bottom: 1rem;
+      font-family: var(--font-display);
+    }
+    .hero-desc {
+      color: rgba(247,243,239,0.9);
+      font-size: 1rem; max-width: 500px;
+      margin-bottom: 2rem; line-height: 1.8;
+    }
+    @media (max-width: 600px) {
+      .hero-content { padding: 7rem 1.4rem 4rem; }
+      .hero-content h1 { font-size: 2rem; }
+    }
+
+    .slider__dots {
+      position: absolute; bottom: 1.5rem;
+      left: 50%; transform: translateX(-50%);
+      display: flex; gap: 0.6rem; z-index: 4;
+    }
+    .dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: rgba(247,243,239,0.3);
+      border: 1.5px solid rgba(247,243,239,0.6);
+      cursor: pointer; padding: 0;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .dot.active { background: var(--sand); border-color: var(--sand); transform: scale(1.3); }
+  </style>
 </head>
 <body>
 
 <div id="nav-placeholder"></div>
 
-<!-- HERO SLIDER -->
-<section class="hero" style="padding:0;min-height:100vh;position:relative;overflow:hidden;display:flex;align-items:center;">
-
-  <!-- Slides -->
+<!-- HERO -->
+<section class="hero-section">
   <div class="slider">
     <div class="slide active" style="background-image:url('images/hero-community.jpg');"></div>
-    <div class="slide" style="background-image:url('images/about-community.jpg');background-position:center top;"></div>
+    <div class="slide"        style="background-image:url('images/about-community.jpg');"></div>
   </div>
-
-  <!-- Dark gradient overlay — stronger at left so text is always readable -->
-  <div style="position:absolute;inset:0;z-index:2;background:linear-gradient(to right, rgba(40,25,15,0.82) 0%, rgba(40,25,15,0.55) 55%, rgba(40,25,15,0.2) 100%);"></div>
-
-  <!-- Dot indicators -->
+  <div class="hero-overlay"></div>
   <div class="slider__dots">
     <button class="dot active" onclick="goToSlide(0)" aria-label="Slide 1"></button>
-    <button class="dot" onclick="goToSlide(1)" aria-label="Slide 2"></button>
+    <button class="dot"        onclick="goToSlide(1)" aria-label="Slide 2"></button>
   </div>
-
-  <!-- Content on top — single column, left aligned, clean -->
-  <div style="position:relative;z-index:3;width:100%;max-width:1200px;margin:0 auto;padding:8rem 2rem 5rem;">
+  <div class="hero-content">
     <span class="eyebrow" style="color:var(--sand);display:block;margin-bottom:1rem;">Glasgow &amp; Renfrewshire</span>
-    <h1 style="color:var(--cream);max-width:640px;margin-bottom:0.75rem;">Where Mothers <em style="color:var(--sand);">Rise</em> Together</h1>
-    <p style="font-style:italic;color:var(--sand);font-size:1rem;margin-bottom:1rem;font-family:var(--font-display);">Caring Made Easy</p>
-    <p style="color:rgba(247,243,239,0.88);font-size:1.05rem;max-width:520px;margin-bottom:2.5rem;line-height:1.75;">My Baby And I is a community association empowering women from ethnically diverse backgrounds — especially new and expectant mothers — to build confidence, access employment, and thrive.</p>
+    <h1>Where Mothers <em>Rise</em> Together</h1>
+    <p class="hero-tagline">Caring Made Easy</p>
+    <p class="hero-desc">My Baby And I is a community association empowering women from ethnically diverse backgrounds — especially new and expectant mothers — to build confidence, access employment, and thrive.</p>
     <div style="display:flex;gap:1rem;flex-wrap:wrap;">
       <a href="get-involved.html" class="btn btn--primary">Get Involved</a>
-      <a href="about.html" class="btn btn--outline">Our Story</a>
+      <a href="about.html"        class="btn btn--outline">Our Story</a>
     </div>
   </div>
 </section>
 
-<style>
-/* ── SLIDER ──────────────────────────────────── */
-.slider { position:absolute; inset:0; z-index:1; }
-.slide {
-  position:absolute; inset:0;
-  background-size:cover;
-  background-position:center center;
-  opacity:0;
-  transition:opacity 1.4s ease-in-out;
-}
-.slide.active { opacity:1; }
-
-/* Dot navigation */
-.slider__dots {
-  position:absolute; bottom:2rem; left:2rem;
-  display:flex; gap:0.6rem; z-index:4;
-}
-.dot {
-  width:10px; height:10px; border-radius:50%;
-  background:rgba(247,243,239,0.35);
-  border:1.5px solid rgba(247,243,239,0.5);
-  cursor:pointer; transition:background 0.3s, transform 0.3s; padding:0;
-}
-.dot.active { background:var(--sand); transform:scale(1.3); border-color:var(--sand); }
-</style>
-
 <script>
-(function() {
+(function(){
   const slides = document.querySelectorAll('.slide');
   const dots   = document.querySelectorAll('.dot');
-  let current  = 0;
-  let timer;
-
-  function goToSlide(n) {
+  let current = 0, timer;
+  function goToSlide(n){
     slides[current].classList.remove('active');
     dots[current].classList.remove('active');
     current = (n + slides.length) % slides.length;
     slides[current].classList.add('active');
     dots[current].classList.add('active');
     clearInterval(timer);
-    timer = setInterval(nextSlide, 5000);
+    timer = setInterval(next, 5000);
   }
-
-  function nextSlide() { goToSlide(current + 1); }
+  function next(){ goToSlide(current + 1); }
   window.goToSlide = goToSlide;
-  timer = setInterval(nextSlide, 5000);
+  timer = setInterval(next, 5000);
 })();
 </script>
 
@@ -95,18 +137,9 @@
 <section class="section--cream">
   <div class="container">
     <div class="stats">
-      <div class="stat fade-up">
-        <span class="stat__num">100+</span>
-        <span class="stat__label">Women Empowered</span>
-      </div>
-      <div class="stat fade-up">
-        <span class="stat__num">2</span>
-        <span class="stat__label">Council Areas Served</span>
-      </div>
-      <div class="stat fade-up">
-        <span class="stat__num">∞</span>
-        <span class="stat__label">Community Connections Made</span>
-      </div>
+      <div class="stat fade-up"><span class="stat__num">100+</span><span class="stat__label">Women Empowered</span></div>
+      <div class="stat fade-up"><span class="stat__num">2</span><span class="stat__label">Council Areas Served</span></div>
+      <div class="stat fade-up"><span class="stat__num">∞</span><span class="stat__label">Community Connections Made</span></div>
     </div>
   </div>
 </section>
@@ -131,26 +164,14 @@
 <!-- PILLARS -->
 <section class="section">
   <div class="container">
-    <div style="text-align:center; margin-bottom:3rem;" class="fade-up">
+    <div style="text-align:center;margin-bottom:3rem;" class="fade-up">
       <span class="eyebrow">What We Do</span>
       <h2>Three Pillars of Support</h2>
     </div>
     <div class="pillars">
-      <div class="pillar fade-up">
-        <div class="pillar__icon">🤝</div>
-        <h3>Peer Support</h3>
-        <p>Safe, welcoming spaces where mothers connect, share experiences, and support one another through the joys and challenges of motherhood and life in Scotland.</p>
-      </div>
-      <div class="pillar fade-up">
-        <div class="pillar__icon">💼</div>
-        <h3>Employment Access</h3>
-        <p>CV workshops, interview coaching, and direct links to employers — helping women re-enter the workforce with confidence and skills that are recognised.</p>
-      </div>
-      <div class="pillar fade-up">
-        <div class="pillar__icon">🌱</div>
-        <h3>Community Connection</h3>
-        <p>Events, partnerships and cultural celebrations that reduce isolation and build lasting friendships within Glasgow and Renfrewshire.</p>
-      </div>
+      <div class="pillar fade-up"><div class="pillar__icon">🤝</div><h3>Peer Support</h3><p>Safe, welcoming spaces where mothers connect, share experiences, and support one another through the joys and challenges of motherhood and life in Scotland.</p></div>
+      <div class="pillar fade-up"><div class="pillar__icon">💼</div><h3>Employment Access</h3><p>CV workshops, interview coaching, and direct links to employers — helping women re-enter the workforce with confidence and skills that are recognised.</p></div>
+      <div class="pillar fade-up"><div class="pillar__icon">🌱</div><h3>Community Connection</h3><p>Events, partnerships and cultural celebrations that reduce isolation and build lasting friendships within Glasgow and Renfrewshire.</p></div>
     </div>
   </div>
 </section>
@@ -159,45 +180,27 @@
 <section class="section section--cream">
   <div class="container">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;" class="fade-up">
-      <div>
-        <span class="eyebrow">Latest</span>
-        <h2>News &amp; Stories</h2>
-      </div>
+      <div><span class="eyebrow">Latest</span><h2>News &amp; Stories</h2></div>
       <a href="news.html" class="btn btn--outline" style="border-color:var(--deep-brown);color:var(--deep-brown);">All News</a>
     </div>
     <div class="cards">
       <div class="card fade-up">
         <div class="card__img" style="background:linear-gradient(135deg,var(--sage),var(--olive));">🌸</div>
-        <div class="card__body">
-          <span class="card__tag">Community</span>
-          <h3>Spring Gathering Brings Families Together in Paisley</h3>
-          <p>Over 40 families joined our spring celebration event, with activities, food, and friendship at the heart of it all.</p>
-          <a href="news.html" class="card__link">Read more</a>
-        </div>
+        <div class="card__body"><span class="card__tag">Community</span><h3>Spring Gathering Brings Families Together in Paisley</h3><p>Over 40 families joined our spring celebration event, with activities, food, and friendship at the heart of it all.</p><a href="news.html" class="card__link">Read more</a></div>
       </div>
       <div class="card fade-up">
         <div class="card__img" style="background:linear-gradient(135deg,var(--sand),var(--terracotta));">💪</div>
-        <div class="card__body">
-          <span class="card__tag">Employment</span>
-          <h3>New Employability Programme Launches in Glasgow</h3>
-          <p>We're excited to announce a new 8-week employability programme, open to all members across Glasgow.</p>
-          <a href="news.html" class="card__link">Read more</a>
-        </div>
+        <div class="card__body"><span class="card__tag">Employment</span><h3>New Employability Programme Launches in Glasgow</h3><p>We're excited to announce a new 8-week employability programme, open to all members across Glasgow.</p><a href="news.html" class="card__link">Read more</a></div>
       </div>
       <div class="card fade-up">
         <div class="card__img" style="background:linear-gradient(135deg,var(--terracotta),var(--deep-brown));">🤝</div>
-        <div class="card__body">
-          <span class="card__tag">Partnership</span>
-          <h3>Clothed in Love Paisley Partnership Announced</h3>
-          <p>We're proud to partner with Clothed in Love Paisley to provide clothing donations for mothers in need.</p>
-          <a href="news.html" class="card__link">Read more</a>
-        </div>
+        <div class="card__body"><span class="card__tag">Partnership</span><h3>Clothed in Love Paisley Partnership Announced</h3><p>We're proud to partner with Clothed in Love Paisley to provide clothing donations for mothers in need.</p><a href="news.html" class="card__link">Read more</a></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- GET INVOLVED CTA -->
+<!-- CTA -->
 <section class="cta-banner">
   <h2>Ready to Make a Difference?</h2>
   <p>Whether you donate, volunteer, or simply spread the word — every action helps a mother in our community thrive.</p>
@@ -208,7 +211,6 @@
 </section>
 
 <div id="footer-placeholder"></div>
-
 <script src="js/components.js"></script>
 <script src="js/main.js"></script>
 </body>
