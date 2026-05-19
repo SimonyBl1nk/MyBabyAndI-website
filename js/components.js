@@ -25,7 +25,7 @@ const FOOTER_HTML = `
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        <img src="images/logo.jpeg" alt="My Baby And I" style="height:64px;width:auto;border-radius:4px;margin-bottom:0.75rem;filter:brightness(0) invert(1) opacity(0.85);"/>
+        <div style="font-family:var(--font-display);font-size:1.4rem;font-weight:900;color:var(--sand);margin-bottom:0.4rem;">My Baby And I</div><div style="font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(247,243,239,0.5);margin-bottom:0.85rem;">Caring Made Easy</div>
         <p>Empowering women from ethnically diverse backgrounds in Glasgow and Renfrewshire — building confidence, community, and careers.</p>
         <a href="mailto:info@mybabyandi.co.uk" style="color:var(--sand);font-size:0.88rem;margin-top:0.5rem;display:inline-block;">info@mybabyandi.co.uk</a>
       </div>
