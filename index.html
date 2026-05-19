@@ -7,177 +7,253 @@
   <meta name="description" content="Empowering women from ethnically diverse backgrounds in Glasgow and Renfrewshire. Building confidence, accessing employment, and thriving through peer support."/>
   <link rel="stylesheet" href="css/style.css"/>
   <style>
-    .hero-section {
-      position: relative;
-      min-height: 100vh;
-      overflow: hidden;
+    /* ── CLEAN HERO (no photo) ───────────────────── */
+    .hero-clean {
+      background: var(--deep-brown);
+      min-height: 88vh;
       display: flex;
       align-items: center;
+      padding-top: 72px;
+      position: relative;
+      overflow: hidden;
     }
-    .slider { position: absolute; inset: 0; z-index: 1; }
-    .slide {
+    /* Subtle dot pattern background */
+    .hero-clean::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(201,168,130,0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    .hero-clean__inner {
+      position: relative; z-index: 2;
+      max-width: 1200px; margin: 0 auto;
+      padding: 4rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .hero-clean__text h1 { color: var(--cream); margin-bottom: 0.75rem; }
+    .hero-clean__text h1 em { color: var(--sand); font-style: italic; }
+    .hero-clean__tagline {
+      font-style: italic; color: var(--sand);
+      font-size: 1.05rem; margin-bottom: 1.2rem;
+      font-family: var(--font-display);
+    }
+    .hero-clean__desc {
+      color: rgba(247,243,239,0.85);
+      font-size: 1.05rem; max-width: 480px;
+      margin-bottom: 2.5rem; line-height: 1.8;
+    }
+    /* Right side: key facts */
+    .hero-clean__facts {
+      display: flex; flex-direction: column; gap: 1.5rem;
+    }
+    .hero-fact {
+      border-left: 3px solid var(--sand);
+      padding-left: 1.2rem;
+    }
+    .hero-fact__num {
+      font-family: var(--font-display);
+      font-size: 2.2rem; font-weight: 900;
+      color: var(--sand); line-height: 1;
+    }
+    .hero-fact__label {
+      font-size: 0.82rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: rgba(247,243,239,0.6);
+      margin-top: 0.2rem;
+    }
+    @media (max-width: 768px) {
+      .hero-clean__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-clean__facts { flex-direction: row; flex-wrap: wrap; gap: 1rem; }
+    }
+
+    /* ── PHOTO SLIDER MISSION ────────────────────── */
+    .mission-slider {
+      position: relative;
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    @media (max-width: 768px) {
+      .mission-slider { min-height: 480px; }
+    }
+
+    /* Slides */
+    .ms-slide {
       position: absolute; inset: 0;
       background-size: cover;
       background-repeat: no-repeat;
-      background-position: center 25%;
+      background-position: center 20%;
       opacity: 0;
-      transition: opacity 1.4s ease-in-out;
+      transition: opacity 1.6s ease-in-out;
     }
-    .slide.active { opacity: 1; }
+    .ms-slide.active { opacity: 1; }
 
-    /* On mobile push photo UP so faces show */
-    @media (max-width: 768px) {
-      .slide { background-position: center 8%; }
-    }
-
-    /* Overlay: solid dark on mobile, fades right on desktop */
-    .hero-overlay {
+    /* Dark overlay so quote text is always readable */
+    .ms-overlay {
       position: absolute; inset: 0; z-index: 2;
-      background: rgba(25, 15, 8, 0.70);
-    }
-    @media (min-width: 769px) {
-      .hero-overlay {
-        background: linear-gradient(
-          to right,
-          rgba(25,15,8,0.82) 0%,
-          rgba(25,15,8,0.58) 50%,
-          rgba(25,15,8,0.22) 100%
-        );
-      }
+      background: rgba(25, 15, 8, 0.65);
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 3;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 9rem 2rem 5rem;
+    /* Quote content */
+    .ms-content {
+      position: relative; z-index: 3;
+      max-width: 700px; margin: 0 auto;
+      padding: 5rem 2rem;
+      text-align: center;
     }
-    .hero-content h1 { color: var(--cream); max-width: 640px; margin-bottom: 0.75rem; }
-    .hero-content h1 em { color: var(--sand); font-style: italic; }
-    .hero-tagline {
-      font-style: italic; color: var(--sand);
-      font-size: 1.05rem; margin-bottom: 1rem;
+    .ms-quote {
       font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-style: italic; color: var(--cream);
+      line-height: 1.45; margin-bottom: 1rem;
     }
-    .hero-desc {
-      color: rgba(247,243,239,0.9);
-      font-size: 1rem; max-width: 500px;
-      margin-bottom: 2rem; line-height: 1.8;
-    }
-    @media (max-width: 600px) {
-      .hero-content { padding: 7rem 1.4rem 4rem; }
-      .hero-content h1 { font-size: 2rem; }
+    .ms-credit {
+      font-size: 0.78rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--sand);
+      margin-bottom: 2.5rem; display: block;
     }
 
-    .slider__dots {
-      position: absolute; bottom: 1.5rem;
-      left: 50%; transform: translateX(-50%);
-      display: flex; gap: 0.6rem; z-index: 4;
+    /* Dots */
+    .ms-dots {
+      display: flex; justify-content: center; gap: 0.6rem;
+      margin-top: 0.5rem;
     }
-    .dot {
-      width: 10px; height: 10px; border-radius: 50%;
+    .ms-dot {
+      width: 9px; height: 9px; border-radius: 50%;
       background: rgba(247,243,239,0.3);
-      border: 1.5px solid rgba(247,243,239,0.6);
+      border: 1.5px solid rgba(247,243,239,0.55);
       cursor: pointer; padding: 0;
       transition: background 0.3s, transform 0.3s;
     }
-    .dot.active { background: var(--sand); border-color: var(--sand); transform: scale(1.3); }
+    .ms-dot.active { background: var(--sand); border-color: var(--sand); transform: scale(1.3); }
   </style>
 </head>
 <body>
 
 <div id="nav-placeholder"></div>
 
-<!-- HERO -->
-<section class="hero-section">
-  <div class="slider">
-    <div class="slide active" style="background-image:url('images/hero-community.jpg');"></div>
-    <div class="slide"        style="background-image:url('images/about-community.jpg');"></div>
+<!-- ── CLEAN HERO ─────────────────────────────── -->
+<section class="hero-clean">
+  <div class="hero-clean__inner">
+    <div class="hero-clean__text">
+      <span class="eyebrow" style="color:var(--sand);display:block;margin-bottom:1rem;">Glasgow &amp; Renfrewshire</span>
+      <h1>Where Mothers <em>Rise</em> Together</h1>
+      <p class="hero-clean__tagline">Caring Made Easy</p>
+      <p class="hero-clean__desc">My Baby And I is a community association empowering women from ethnically diverse backgrounds — especially new and expectant mothers — to build confidence, access employment, and thrive.</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="get-involved.html" class="btn btn--primary">Get Involved</a>
+        <a href="about.html" class="btn btn--outline">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-clean__facts">
+      <div class="hero-fact">
+        <div class="hero-fact__num">100+</div>
+        <div class="hero-fact__label">Women Empowered</div>
+      </div>
+      <div class="hero-fact">
+        <div class="hero-fact__num">2</div>
+        <div class="hero-fact__label">Council Areas Served</div>
+      </div>
+      <div class="hero-fact">
+        <div class="hero-fact__num">Glasgow &amp; Renfrewshire</div>
+        <div class="hero-fact__label">Our Communities</div>
+      </div>
+      <div class="hero-fact">
+        <div class="hero-fact__num">Free</div>
+        <div class="hero-fact__label">All Services &amp; Support</div>
+      </div>
+    </div>
   </div>
-  <div class="hero-overlay"></div>
-  <div class="slider__dots">
-    <button class="dot active" onclick="goToSlide(0)" aria-label="Slide 1"></button>
-    <button class="dot"        onclick="goToSlide(1)" aria-label="Slide 2"></button>
+</section>
+
+<!-- ── STATS BAR ───────────────────────────────── -->
+<section class="section--cream" style="padding:0;">
+  <div class="container">
+    <div class="stats">
+      <div class="stat fade-up"><span class="stat__num">100+</span><span class="stat__label">Women Empowered</span></div>
+      <div class="stat fade-up"><span class="stat__num">2</span><span class="stat__label">Council Areas Served</span></div>
+      <div class="stat fade-up"><span class="stat__num">Free</span><span class="stat__label">All Our Services</span></div>
+    </div>
   </div>
-  <div class="hero-content">
-    <span class="eyebrow" style="color:var(--sand);display:block;margin-bottom:1rem;">Glasgow &amp; Renfrewshire</span>
-    <h1>Where Mothers <em>Rise</em> Together</h1>
-    <p class="hero-tagline">Caring Made Easy</p>
-    <p class="hero-desc">My Baby And I is a community association empowering women from ethnically diverse backgrounds — especially new and expectant mothers — to build confidence, access employment, and thrive.</p>
-    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-      <a href="get-involved.html" class="btn btn--primary">Get Involved</a>
-      <a href="about.html"        class="btn btn--outline">Our Story</a>
+</section>
+
+<!-- ── PHOTO SLIDER MISSION ───────────────────── -->
+<section class="mission-slider">
+  <!-- Background slides — your real community photos -->
+  <div class="ms-slide active" style="background-image:url('images/hero-community.jpg');"></div>
+  <div class="ms-slide"        style="background-image:url('images/about-community.jpg');background-position:center 10%;"></div>
+
+  <div class="ms-overlay"></div>
+
+  <div class="ms-content">
+    <span class="eyebrow" style="color:var(--sand);display:block;margin-bottom:1.5rem;">Our Mission</span>
+    <p class="ms-quote">"Every mother deserves a community that believes in her future."</p>
+    <span class="ms-credit">— My Baby And I</span>
+    <a href="about.html" class="btn btn--outline" style="display:inline-block;">Learn More About Us</a>
+    <div class="ms-dots" style="margin-top:2rem;">
+      <button class="ms-dot active" onclick="msGoTo(0)" aria-label="Photo 1"></button>
+      <button class="ms-dot"        onclick="msGoTo(1)" aria-label="Photo 2"></button>
     </div>
   </div>
 </section>
 
 <script>
 (function(){
-  const slides = document.querySelectorAll('.slide');
-  const dots   = document.querySelectorAll('.dot');
-  let current = 0, timer;
-  function goToSlide(n){
-    slides[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    current = (n + slides.length) % slides.length;
-    slides[current].classList.add('active');
-    dots[current].classList.add('active');
+  const slides = document.querySelectorAll('.ms-slide');
+  const dots   = document.querySelectorAll('.ms-dot');
+  let cur = 0, timer;
+  function msGoTo(n){
+    slides[cur].classList.remove('active');
+    dots[cur].classList.remove('active');
+    cur = (n + slides.length) % slides.length;
+    slides[cur].classList.add('active');
+    dots[cur].classList.add('active');
     clearInterval(timer);
-    timer = setInterval(next, 5000);
+    timer = setInterval(next, 5500);
   }
-  function next(){ goToSlide(current + 1); }
-  window.goToSlide = goToSlide;
-  timer = setInterval(next, 5000);
+  function next(){ msGoTo(cur + 1); }
+  window.msGoTo = msGoTo;
+  timer = setInterval(next, 5500);
 })();
 </script>
 
-<!-- STATS -->
-<section class="section--cream">
-  <div class="container">
-    <div class="stats">
-      <div class="stat fade-up"><span class="stat__num">100+</span><span class="stat__label">Women Empowered</span></div>
-      <div class="stat fade-up"><span class="stat__num">2</span><span class="stat__label">Council Areas Served</span></div>
-      <div class="stat fade-up"><span class="stat__num">∞</span><span class="stat__label">Community Connections Made</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- MISSION SPLIT -->
-<section class="mission">
-  <div class="mission__img">
-    <div class="mission__img-inner">
-      <p class="mission__img-quote">"Every mother deserves a community that believes in her future."</p>
-      <span class="mission__img-credit">— My Baby And I</span>
-    </div>
-  </div>
-  <div class="mission__text">
-    <span class="eyebrow">Our Mission</span>
-    <h2>Built By Women, For Women</h2>
-    <p>We exist to break down the barriers that women from ethnically diverse backgrounds face — isolation, language, lack of networks, and limited access to opportunity.</p>
-    <p>Through peer support, mentoring, employability workshops, and community events, we help new and expectant mothers find their footing, their voice, and their future in Scotland.</p>
-    <a href="about.html" class="btn btn--dark" style="margin-top:1rem;">Learn More About Us</a>
-  </div>
-</section>
-
-<!-- PILLARS -->
-<section class="section">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:3rem;" class="fade-up">
-      <span class="eyebrow">What We Do</span>
-      <h2>Three Pillars of Support</h2>
-    </div>
-    <div class="pillars">
-      <div class="pillar fade-up"><div class="pillar__icon">🤝</div><h3>Peer Support</h3><p>Safe, welcoming spaces where mothers connect, share experiences, and support one another through the joys and challenges of motherhood and life in Scotland.</p></div>
-      <div class="pillar fade-up"><div class="pillar__icon">💼</div><h3>Employment Access</h3><p>CV workshops, interview coaching, and direct links to employers — helping women re-enter the workforce with confidence and skills that are recognised.</p></div>
-      <div class="pillar fade-up"><div class="pillar__icon">🌱</div><h3>Community Connection</h3><p>Events, partnerships and cultural celebrations that reduce isolation and build lasting friendships within Glasgow and Renfrewshire.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- LATEST NEWS -->
+<!-- ── MISSION TEXT ────────────────────────────── -->
 <section class="section section--cream">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="fade-up">
+      <div>
+        <span class="eyebrow">What We Do</span>
+        <h2 style="margin-top:0.5rem;margin-bottom:1.2rem;">Built By Women, For Women</h2>
+        <p>We exist to break down the barriers that women from ethnically diverse backgrounds face — isolation, language, lack of networks, and limited access to opportunity.</p>
+        <p style="margin-top:1rem;">Through peer support, mentoring, employability workshops, and community events, we help new and expectant mothers find their footing, their voice, and their future in Scotland.</p>
+        <a href="about.html" class="btn btn--dark" style="margin-top:1.5rem;display:inline-block;">Learn More About Us</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1.5rem;">
+        <div style="padding:1.5rem;background:var(--warm-white);border-left:4px solid var(--terracotta);">
+          <div style="font-size:1.5rem;margin-bottom:0.5rem;">🤝</div>
+          <h4>Peer Support</h4>
+          <p style="font-size:0.9rem;margin-top:0.3rem;">Safe, welcoming spaces where mothers connect and support one another.</p>
+        </div>
+        <div style="padding:1.5rem;background:var(--warm-white);border-left:4px solid var(--sand);">
+          <div style="font-size:1.5rem;margin-bottom:0.5rem;">💼</div>
+          <h4>Employment Access</h4>
+          <p style="font-size:0.9rem;margin-top:0.3rem;">CV workshops, interview coaching, and direct links to employers.</p>
+        </div>
+        <div style="padding:1.5rem;background:var(--warm-white);border-left:4px solid var(--olive);">
+          <div style="font-size:1.5rem;margin-bottom:0.5rem;">🌱</div>
+          <h4>Community Connection</h4>
+          <p style="font-size:0.9rem;margin-top:0.3rem;">Events and partnerships that reduce isolation and build lasting bonds.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LATEST NEWS ─────────────────────────────── -->
+<section class="section">
   <div class="container">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;" class="fade-up">
       <div><span class="eyebrow">Latest</span><h2>News &amp; Stories</h2></div>
@@ -200,7 +276,7 @@
   </div>
 </section>
 
-<!-- CTA -->
+<!-- ── CTA ─────────────────────────────────────── -->
 <section class="cta-banner">
   <h2>Ready to Make a Difference?</h2>
   <p>Whether you donate, volunteer, or simply spread the word — every action helps a mother in our community thrive.</p>
