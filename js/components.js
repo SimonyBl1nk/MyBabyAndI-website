@@ -19,6 +19,36 @@ const NAV_HTML = `
   </div>
 </nav>`;
 
+// Scrolling partners bar
+const PARTNERS_HTML = `
+<section class="partners-bar">
+  <div class="partners-bar__label">Our Partners &amp; Funders</div>
+  <div class="partners-bar__track-wrap">
+    <div class="partners-bar__track">
+      <a href="https://www.oneren.org/" target="_blank" rel="noopener" class="partners-bar__item"><img src="images/partners/oneren-opt.png" alt="OneRen"/></a>
+      <a href="https://engagerenfrewshire.org/" target="_blank" rel="noopener" class="partners-bar__item"><img src="images/partners/engage-opt.png" alt="Engage Renfrewshire"/></a>
+      <a href="#" class="partners-bar__item"><img src="images/partners/clothedinlove-opt.png" alt="Clothed in Love"/></a>
+      <a href="https://www.corra.scot/" target="_blank" rel="noopener" class="partners-bar__item"><img src="images/partners/corra-opt.png" alt="Corra Foundation"/></a>
+      <a href="https://www.oneren.org/" target="_blank" rel="noopener" class="partners-bar__item"><img src="images/partners/oneren-opt.png" alt="OneRen"/></a>
+      <a href="https://engagerenfrewshire.org/" target="_blank" rel="noopener" class="partners-bar__item"><img src="images/partners/engage-opt.png" alt="Engage Renfrewshire"/></a>
+      <a href="#" class="partners-bar__item"><img src="images/partners/clothedinlove-opt.png" alt="Clothed in Love"/></a>
+      <a href="https://www.corra.scot/" target="_blank" rel="noopener" class="partners-bar__item"><img src="images/partners/corra-opt.png" alt="Corra Foundation"/></a>
+    </div>
+  </div>
+</section>
+<style>
+.partners-bar{background:var(--cream);border-top:1px solid rgba(59,35,20,0.1);border-bottom:1px solid rgba(59,35,20,0.1);padding:1.5rem 0;overflow:hidden;}
+.partners-bar__label{text-align:center;font-size:0.7rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--charcoal);opacity:0.45;margin-bottom:1.2rem;}
+.partners-bar__track-wrap{overflow:hidden;width:100%;}
+.partners-bar__track{display:flex;align-items:center;gap:4rem;width:max-content;animation:scroll-partners 18s linear infinite;}
+.partners-bar__track:hover{animation-play-state:paused;}
+.partners-bar__item{display:flex;align-items:center;flex-shrink:0;opacity:0.7;transition:opacity 0.3s;filter:grayscale(30%);}
+.partners-bar__item:hover{opacity:1;filter:grayscale(0%);}
+.partners-bar__item img{height:48px;width:auto;display:block;object-fit:contain;}
+@keyframes scroll-partners{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@media(max-width:600px){.partners-bar__item img{height:36px;}.partners-bar__track{gap:2.5rem;animation-duration:14s;}}
+</style>`;
+
 // Shared footer HTML
 const FOOTER_HTML = `
 <footer class="footer">
@@ -66,4 +96,4 @@ const FOOTER_HTML = `
 
 // Inject into page
 document.getElementById('nav-placeholder').innerHTML = NAV_HTML;
-document.getElementById('footer-placeholder').innerHTML = FOOTER_HTML;
+document.getElementById('footer-placeholder').innerHTML = PARTNERS_HTML + FOOTER_HTML;
