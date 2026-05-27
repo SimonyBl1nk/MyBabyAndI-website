@@ -25,14 +25,14 @@ const PARTNERS_HTML = `
   <div class="partners-bar__label">Our Partners &amp; Funders</div>
   <div class="partners-bar__track-wrap">
     <div class="partners-bar__track">
-      <a href="https://www.oneren.org/" target="_blank" rel="noopener" class="partners-bar__item"><img src="images/partners/oneren-opt.png" alt="OneRen"/></a>
-      <a href="https://engagerenfrewshire.org/" target="_blank" rel="noopener" class="partners-bar__item"><img src="images/partners/engage-opt.png" alt="Engage Renfrewshire"/></a>
-      <a href="#" class="partners-bar__item"><img src="images/partners/clothedinlove-opt.png" alt="Clothed in Love"/></a>
-      <a href="https://www.corra.scot/" target="_blank" rel="noopener" class="partners-bar__item"><img src="images/partners/corra-opt.png" alt="Corra Foundation"/></a>
-      <a href="https://www.oneren.org/" target="_blank" rel="noopener" class="partners-bar__item"><img src="images/partners/oneren-opt.png" alt="OneRen"/></a>
-      <a href="https://engagerenfrewshire.org/" target="_blank" rel="noopener" class="partners-bar__item"><img src="images/partners/engage-opt.png" alt="Engage Renfrewshire"/></a>
-      <a href="#" class="partners-bar__item"><img src="images/partners/clothedinlove-opt.png" alt="Clothed in Love"/></a>
-      <a href="https://www.corra.scot/" target="_blank" rel="noopener" class="partners-bar__item"><img src="images/partners/corra-opt.png" alt="Corra Foundation"/></a>
+      <a href="https://www.oneren.org/" target="_blank" rel="noopener" class="partners-bar__item"><img src="images/images/partners/oneren-opt.png" alt="OneRen"/></a>
+      <a href="https://engagerenfrewshire.org/" target="_blank" rel="noopener" class="partners-bar__item"><img src="images/images/partners/engage-opt.png" alt="Engage Renfrewshire"/></a>
+      <a href="#" class="partners-bar__item"><img src="images/images/partners/clothedinlove-opt.png" alt="Clothed in Love"/></a>
+      <a href="https://www.corra.scot/" target="_blank" rel="noopener" class="partners-bar__item"><img src="images/images/partners/corra-opt.png" alt="Corra Foundation"/></a>
+      <a href="https://www.oneren.org/" target="_blank" rel="noopener" class="partners-bar__item"><img src="images/images/partners/oneren-opt.png" alt="OneRen"/></a>
+      <a href="https://engagerenfrewshire.org/" target="_blank" rel="noopener" class="partners-bar__item"><img src="images/images/partners/engage-opt.png" alt="Engage Renfrewshire"/></a>
+      <a href="#" class="partners-bar__item"><img src="images/images/partners/clothedinlove-opt.png" alt="Clothed in Love"/></a>
+      <a href="https://www.corra.scot/" target="_blank" rel="noopener" class="partners-bar__item"><img src="images/images/partners/corra-opt.png" alt="Corra Foundation"/></a>
     </div>
   </div>
 </section>
