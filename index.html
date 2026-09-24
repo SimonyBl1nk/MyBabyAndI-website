@@ -2,121 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Baby And I | Community Association — Glasgow &amp; Renfrewshire</title>
-  <meta name="description" content="Empowering women from ethnically diverse backgrounds in Glasgow and Renfrewshire. Building confidence, accessing employment, and thriving through peer support."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>My Baby And I | We Thrive — Glasgow &amp; Renfrewshire</title>
+  <meta name="description" content="Empowering ethnic minority mothers to connect, learn and thrive in Glasgow and Renfrewshire. Free peer support, employability workshops and community events."/>
   <link rel="stylesheet" href="css/style.css"/>
-  <style>
-    /* ── HERO: clean dark, no photo ─────────────── */
-    .hero {
-      background: var(--deep-brown);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding-top: 72px;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background-image: radial-gradient(circle, rgba(201,168,130,0.07) 1px, transparent 1px);
-      background-size: 28px 28px;
-      pointer-events: none;
-    }
-    .hero__inner {
-      position: relative; z-index: 2;
-      max-width: 1200px; margin: 0 auto;
-      padding: 4rem 2rem;
-    }
-    .hero__inner h1 { color: var(--cream); max-width: 700px; margin-bottom: 0.75rem; }
-    .hero__inner h1 em { color: var(--sand); font-style: italic; }
-    .hero__tagline {
-      font-style: italic; color: var(--sand);
-      font-size: 1.05rem; margin-bottom: 1.2rem;
-      font-family: var(--font-display);
-    }
-    .hero__desc {
-      color: rgba(247,243,239,0.85);
-      font-size: 1.05rem;
-      max-width: 540px;
-      margin-bottom: 2.5rem;
-      line-height: 1.8;
-    }
-    @media (max-width: 600px) {
-      .hero__inner { padding: 3rem 1.4rem; }
-      .hero__inner h1 { font-size: 2.2rem; }
-    }
-
-    /* ── PHOTO SLIDER MISSION ────────────────────── */
-    /* Quote sits ABOVE the photos on a dark band */
-    .mission-block { background: var(--deep-brown); }
-
-    .mission-quote {
-      text-align: center;
-      padding: 3.5rem 2rem 2.5rem;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .mission-quote .eyebrow { color: var(--sand); display: block; margin-bottom: 1rem; }
-    .mission-quote blockquote {
-      font-family: var(--font-display);
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      font-style: italic;
-      color: var(--cream);
-      line-height: 1.5;
-      margin: 0 0 0.75rem;
-    }
-    .mission-quote cite {
-      font-size: 0.75rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--sand);
-      font-style: normal;
-    }
-
-    /* Photos sit BELOW the quote, side by side, no overlay */
-    .mission-photos {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4px;
-      max-height: 480px;
-      overflow: hidden;
-    }
-    .mission-photo {
-      width: 100%; height: 480px;
-      object-fit: cover;
-      object-position: center 15%;
-      display: block;
-      transition: transform 0.6s ease;
-    }
-    .mission-photo:hover { transform: scale(1.02); }
-
-    @media (max-width: 640px) {
-      .mission-photos { grid-template-columns: 1fr; max-height: none; }
-      .mission-photo { height: 300px; }
-      .mission-quote { padding: 2.5rem 1.4rem 2rem; }
-    }
-
-    /* CTA below photos */
-    .mission-cta {
-      background: var(--deep-brown);
-      text-align: center;
-      padding: 2rem;
-    }
-  </style>
 </head>
 <body>
 
 <div id="nav-placeholder"></div>
 
-<!-- ── CLEAN HERO ─────────────────────────────── -->
+<!-- ── HERO ─────────────────────────────────────── -->
 <section class="hero">
   <div class="hero__inner">
     <span class="eyebrow" style="color:var(--sand);display:block;margin-bottom:1rem;">Glasgow &amp; Renfrewshire</span>
     <h1>Where Mothers <em>Rise</em> Together</h1>
-    <p class="hero__tagline">Caring Made Easy</p>
-    <p class="hero__desc">My Baby And I is a community association empowering women from ethnically diverse backgrounds — especially new and expectant mothers — to build confidence, access employment, and thrive.</p>
+    <p class="hero__tagline">We Thrive</p>
+    <p class="hero__desc">Empowering ethnic minority mothers to connect, learn and thrive — through peer support, employability workshops, and community connection.</p>
     <div style="display:flex;gap:1rem;flex-wrap:wrap;">
       <a href="get-involved.html" class="btn btn--primary">Get Involved</a>
       <a href="about.html" class="btn btn--outline">Our Story</a>
@@ -124,41 +25,34 @@
   </div>
 </section>
 
-<!-- ── STATS ──────────────────────────────────── -->
+<!-- ── STATS ─────────────────────────────────────── -->
 <section class="section--cream" style="padding:0;">
   <div class="container">
     <div class="stats">
-      <div class="stat fade-up"><span class="stat__num">100+</span><span class="stat__label">Women Empowered</span></div>
+      <div class="stat fade-up"><span class="stat__num">100+</span><span class="stat__label">Mothers Empowered</span></div>
       <div class="stat fade-up"><span class="stat__num">2</span><span class="stat__label">Council Areas Served</span></div>
-      <div class="stat fade-up"><span class="stat__num">∞</span><span class="stat__label">Community Connections Made</span></div>
+      <div class="stat fade-up"><span class="stat__num">Free</span><span class="stat__label">All Our Services</span></div>
     </div>
   </div>
 </section>
 
-<!-- ── MISSION + PHOTOS ───────────────────────── -->
+<!-- ── MISSION + PHOTOS ──────────────────────────── -->
 <div class="mission-block">
-
-  <!-- Quote first, clearly readable on dark background -->
   <div class="mission-quote">
     <span class="eyebrow">Our Mission</span>
-    <blockquote>"Empowering ethnic minority mothers to connect, grow and thrive."</blockquote>
+    <blockquote>"Empowering ethnic minority mothers to connect, learn and thrive."</blockquote>
     <cite>— My Baby And I</cite>
   </div>
-
-  <!-- Both photos side by side, full colour, no text on top -->
   <div class="mission-photos">
-    <img src="images/hero-community.jpg"  class="mission-photo" alt="My Baby And I community gathering — group of women at a community event"/>
-    <img src="images/about-community.jpg" class="mission-photo" alt="My Baby And I members — women smiling together at a community session"/>
+    <img src="images/hero-community.jpg"  class="mission-photo" alt="My Baby And I community gathering"/>
+    <img src="images/about-community.jpg" class="mission-photo" alt="My Baby And I members at a community session"/>
   </div>
-
-  <!-- Small CTA below photos -->
   <div class="mission-cta">
     <a href="about.html" class="btn btn--outline">Learn More About Us</a>
   </div>
-
 </div>
 
-<!-- ── PILLARS ────────────────────────────────── -->
+<!-- ── THREE PILLARS ─────────────────────────────── -->
 <section class="section">
   <div class="container">
     <div style="text-align:center;margin-bottom:3rem;" class="fade-up">
@@ -167,17 +61,26 @@
     </div>
     <div class="pillars">
       <div class="pillar fade-up">
-        <div class="pillar__icon">🤝</div>
+        <div class="pillar__icon">
+          <!-- Peer support / handshake icon -->
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
         <h3>Peer Support</h3>
         <p>Safe, welcoming spaces where mothers connect, share experiences, and support one another through the joys and challenges of motherhood and life in Scotland.</p>
       </div>
       <div class="pillar fade-up">
-        <div class="pillar__icon">💼</div>
+        <div class="pillar__icon">
+          <!-- Briefcase / employment icon -->
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
         <h3>Employment Access</h3>
         <p>CV workshops, interview coaching, and direct links to employers — helping women re-enter the workforce with confidence and skills that are recognised.</p>
       </div>
       <div class="pillar fade-up">
-        <div class="pillar__icon">🌱</div>
+        <div class="pillar__icon">
+          <!-- Community / users icon -->
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
         <h3>Community Connection</h3>
         <p>Events, partnerships and cultural celebrations that reduce isolation and build lasting friendships within Glasgow and Renfrewshire.</p>
       </div>
@@ -185,8 +88,39 @@
   </div>
 </section>
 
-<!-- ── LATEST NEWS ─────────────────────────────── -->
-<section class="section section--cream">
+<!-- ── UPCOMING EVENT BANNER ──────────────────────── -->
+<section style="background:var(--cream);padding:3rem 0;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;" class="fade-up">
+      <div>
+        <span class="eyebrow">Upcoming Event</span>
+        <h2 style="margin-top:0.5rem;">Women's Empowerment Workshop</h2>
+        <p style="margin-top:1rem;">Join us for an inspiring session exploring <strong>Identity, Motherhood and Wellbeing</strong> — the first in a series of empowerment workshops running through to August 2027.</p>
+        <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:0.6rem;">
+          <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.9rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <strong>Saturday, 3 October 2026 at 1:00PM</strong>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.9rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Wellness Suite, Lagoon Leisure Centre, 11 Christie St, Paisley PA1 1NB</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.9rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Free childminder available — no booking required</span>
+          </div>
+        </div>
+        <a href="news.html" class="btn btn--primary" style="margin-top:1.75rem;display:inline-block;">View Full Details</a>
+      </div>
+      <div style="text-align:center;">
+        <img src="images/events/empowerment-workshop-flyer.jpg" alt="Women's Empowerment Workshop flyer — 3 October 2026" style="max-width:340px;width:100%;border-radius:4px;box-shadow:0 8px 32px rgba(59,35,20,0.15);"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LATEST NEWS ────────────────────────────────── -->
+<section class="section">
   <div class="container">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;" class="fade-up">
       <div><span class="eyebrow">Latest</span><h2>News &amp; Stories</h2></div>
@@ -194,28 +128,64 @@
     </div>
     <div class="cards">
       <div class="card fade-up">
-        <div class="card__img" style="background:linear-gradient(135deg,var(--sage),var(--olive));">🌸</div>
-        <div class="card__body"><span class="card__tag">Community</span><h3>Spring Gathering Brings Families Together in Paisley</h3><p>Over 40 families joined our spring celebration event, with activities, food, and friendship at the heart of it all.</p><a href="news.html" class="card__link">Read more</a></div>
+        <div class="card__img" style="background:linear-gradient(135deg,#6B8F5E,#3D5C2E);">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="card__body">
+          <span class="card__tag">Community</span>
+          <h3>Summer Party at Barshaw Park, Paisley</h3>
+          <p>Mothers and children came together for a joyful summer party at Barshaw Park on 1 August 2026 — sunshine, laughter and community spirit.</p>
+          <a href="news-summer-party.html" class="card__link">Read more</a>
+        </div>
       </div>
       <div class="card fade-up">
-        <div class="card__img" style="background:linear-gradient(135deg,var(--sand),var(--terracotta));">💪</div>
-        <div class="card__body"><span class="card__tag">Employment</span><h3>New Employability Programme Launches in Glasgow</h3><p>We're excited to announce a new 8-week employability programme, open to all members across Glasgow.</p><a href="news.html" class="card__link">Read more</a></div>
+        <div class="card__img" style="background:linear-gradient(135deg,var(--sand),var(--terracotta));">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div class="card__body">
+          <span class="card__tag">Employment</span>
+          <h3>Free CV Clinic &amp; NHS Application Support</h3>
+          <p>Our CV clinic at The Lagoon Centre empowered women with the tools and confidence to take the next step in their careers.</p>
+          <a href="news-cv-clinic.html" class="card__link">Read more</a>
+        </div>
       </div>
       <div class="card fade-up">
-        <div class="card__img" style="background:linear-gradient(135deg,var(--terracotta),var(--deep-brown));">🤝</div>
-        <div class="card__body"><span class="card__tag">Partnership</span><h3>Clothed in Love Paisley Partnership Announced</h3><p>We're proud to partner with Clothed in Love Paisley to provide clothing donations for mothers in need.</p><a href="news.html" class="card__link">Read more</a></div>
+        <div class="card__img" style="background:linear-gradient(135deg,var(--terracotta),var(--deep-brown));">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="card__body">
+          <span class="card__tag">Partnership</span>
+          <h3>National Lottery Community Fund Support</h3>
+          <p>We are proud to be supported by the National Lottery Community Fund, enabling us to reach more mothers across Glasgow and Renfrewshire.</p>
+          <a href="news.html" class="card__link">Read more</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── CTA ─────────────────────────────────────── -->
+<!-- ── CTA ───────────────────────────────────────── -->
 <section class="cta-banner">
   <h2>Ready to Make a Difference?</h2>
   <p>Whether you donate, volunteer, or simply spread the word — every action helps a mother in our community thrive.</p>
   <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
     <a href="get-involved.html#donate" class="btn btn--outline">Donate Today</a>
     <a href="get-involved.html#volunteer" class="btn btn--sand">Volunteer</a>
+  </div>
+</section>
+
+<!-- ── SOCIAL STRIP ───────────────────────────────── -->
+<section style="background:var(--deep-brown);padding:2rem 1.5rem;text-align:center;">
+  <p style="color:rgba(247,243,239,0.6);font-size:0.78rem;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1rem;">Follow Our Community</p>
+  <div style="display:flex;gap:1.5rem;justify-content:center;align-items:center;flex-wrap:wrap;">
+    <a href="https://www.facebook.com/mybabyandiUK" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.5rem;color:var(--sand);font-size:0.9rem;font-weight:500;transition:opacity 0.2s;" onmouseover="this.style.opacity=0.7" onmouseout="this.style.opacity=1">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      @mybabyandiUK
+    </a>
+    <a href="https://www.instagram.com/mybabyandi_uk" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.5rem;color:var(--sand);font-size:0.9rem;font-weight:500;transition:opacity 0.2s;" onmouseover="this.style.opacity=0.7" onmouseout="this.style.opacity=1">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      @mybabyandi_uk
+    </a>
   </div>
 </section>
 
