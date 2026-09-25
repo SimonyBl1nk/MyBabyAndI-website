@@ -32,7 +32,7 @@ const PARTNERS_HTML = `
         <img src="images/images/partners/engage-opt.png" alt="Engage Renfrewshire"/>
       </a>
       <a href="https://www.tnlcommunityfund.org.uk/" target="_blank" rel="noopener" class="partners-bar__item">
-        <img src="images/partners/tnl-logo.jpg" alt="National Lottery Community Fund"/>
+        <img src="partners/tnl-logo.jpg" alt="National Lottery Community Fund"/>
       </a>
       <a href="https://www.corra.scot/" target="_blank" rel="noopener" class="partners-bar__item">
         <img src="images/images/partners/corra-opt.png" alt="Corra Foundation"/>
@@ -47,7 +47,7 @@ const PARTNERS_HTML = `
         <img src="images/images/partners/engage-opt.png" alt="Engage Renfrewshire"/>
       </a>
       <a href="https://www.tnlcommunityfund.org.uk/" target="_blank" rel="noopener" class="partners-bar__item">
-        <img src="images/partners/tnl-logo.jpg" alt="National Lottery Community Fund"/>
+        <img src="partners/tnl-logo.jpg" alt="National Lottery Community Fund"/>
       </a>
       <a href="https://www.corra.scot/" target="_blank" rel="noopener" class="partners-bar__item">
         <img src="images/images/partners/corra-opt.png" alt="Corra Foundation"/>
