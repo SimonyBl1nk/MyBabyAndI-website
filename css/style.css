@@ -300,3 +300,95 @@ table { width: 100%; }
   .mission { grid-template-columns: 1fr !important; }
   .mission__text { padding: 2.5rem 1.25rem !important; }
 }
+
+/* ── MOBILE WORLD-CLASS OPTIMISATION ─────────────── */
+
+/* Nav logo - transparent, no white box */
+.nav__logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+  background: transparent;
+}
+
+/* Featured event - mobile stack */
+@media (max-width: 700px) {
+  .featured-event-grid { grid-template-columns: 1fr !important; }
+  .featured-event-text  { padding: 1.5rem !important; }
+}
+
+/* News featured block mobile */
+@media (max-width: 700px) {
+  [style*="grid-template-columns:1fr 1.4fr"] {
+    grid-template-columns: 1fr !important;
+  }
+  [style*="padding:2.5rem 2.5rem 2.5rem 0"] {
+    padding: 1.5rem !important;
+  }
+}
+
+/* Upcoming event section on homepage mobile */
+@media (max-width: 700px) {
+  [style*="grid-template-columns:1fr 1fr;gap:3rem;align-items:center"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+}
+
+/* Footer logo - white version blends on dark */
+.footer__brand img {
+  background: transparent;
+  filter: none;
+}
+
+/* Touch targets - minimum 44px on mobile */
+@media (max-width: 860px) {
+  .nav__links a { min-height: 44px; display: flex; align-items: center; }
+  .btn { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+}
+
+/* Prevent horizontal scroll */
+body { overflow-x: hidden; }
+* { max-width: 100%; }
+img { max-width: 100%; height: auto; }
+
+/* Better tap highlight on mobile */
+a, button { -webkit-tap-highlight-color: rgba(160,115,90,0.15); }
+
+/* Smoother fonts on mobile */
+body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+/* Donation grid mobile */
+@media (max-width: 700px) {
+  [style*="grid-template-columns:1fr 1fr;gap:4rem;align-items:start"] {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+}
+
+/* Partners grid mobile */
+@media (max-width: 600px) {
+  [style*="grid-template-columns:repeat(2,1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Article pages mobile */
+@media (max-width: 600px) {
+  .article-body { padding: 2rem 1.25rem 3rem; }
+  .photo-grid { grid-template-columns: 1fr !important; }
+  .photo-grid img { height: 240px !important; }
+  .photo-grid img.full { height: 260px !important; }
+  .sessions-grid { grid-template-columns: 1fr !important; }
+  .flyer-wrap img { max-width: 100% !important; }
+}
+
+/* Event rows mobile */
+@media (max-width: 600px) {
+  .event-row {
+    grid-template-columns: 70px 1fr !important;
+    gap: 1rem !important;
+    padding: 1rem !important;
+  }
+  .event-row .btn { display: none; }
+}
