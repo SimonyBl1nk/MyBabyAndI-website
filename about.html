@@ -9,6 +9,58 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* ── Mobile-first responsive overrides for About page ── */
+
+    .about-who-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    .values-box {
+      background: var(--cream);
+      padding: 2rem 1.5rem;
+      border-left: 4px solid var(--terracotta);
+    }
+    .values-list {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .value-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+    }
+    .value-item svg { flex-shrink: 0; margin-top: 3px; }
+    .value-item h4 { margin: 0 0 0.25rem; }
+    .value-item p { font-size: 0.9rem; margin: 0; }
+
+    /* Desktop: two columns side by side */
+    @media (min-width: 768px) {
+      .about-who-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+      .values-box {
+        padding: 3rem;
+      }
+    }
+
+    /* Jobs section box */
+    .jobs-box {
+      background: var(--warm-white);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border: 1.5px solid rgba(59,35,20,0.1);
+    }
+    @media (min-width: 600px) {
+      .jobs-box { padding: 3rem; }
+    }
+  </style>
 </head>
 <body>
 
@@ -24,7 +76,7 @@
 <!-- WHO WE ARE -->
 <section class="section">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+    <div class="about-who-grid">
       <div class="fade-up">
         <span class="eyebrow">Who We Are</span>
         <h2>A Community Built on Belonging</h2>
@@ -32,24 +84,24 @@
         <p style="margin-top:1rem;">We understand that the journey into motherhood can feel isolating, especially when you're navigating a new country, culture, or language. That's why we created a warm, welcoming space where women can find sisterhood, practical support, and the tools they need to build the life they deserve.</p>
         <p style="margin-top:1rem;">We work in partnership with local councils, employers, charities, and community organisations to make sure our members have access to real opportunities.</p>
       </div>
-      <div class="fade-up" style="background:var(--cream);padding:3rem;border-left:4px solid var(--terracotta);">
+      <div class="values-box fade-up">
         <span class="eyebrow">Our Values</span>
-        <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:1.2rem;">
-          <div style="display:flex;align-items:flex-start;gap:0.85rem;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px;"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            <div><h4>Inclusion</h4><p style="font-size:0.9rem;margin-top:0.3rem;">Every woman, regardless of background, language or circumstance, belongs here.</p></div>
+        <div class="values-list">
+          <div class="value-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <div><h4>Inclusion</h4><p>Every woman, regardless of background, language or circumstance, belongs here.</p></div>
           </div>
-          <div style="display:flex;align-items:flex-start;gap:0.85rem;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            <div><h4>Dignity</h4><p style="font-size:0.9rem;margin-top:0.3rem;">We treat every mother with the respect and care she deserves.</p></div>
+          <div class="value-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <div><h4>Dignity</h4><p>We treat every mother with the respect and care she deserves.</p></div>
           </div>
-          <div style="display:flex;align-items:flex-start;gap:0.85rem;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-            <div><h4>Growth</h4><p style="font-size:0.9rem;margin-top:0.3rem;">We believe in the limitless potential of every woman in our community.</p></div>
+          <div class="value-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            <div><h4>Growth</h4><p>We believe in the limitless potential of every woman in our community.</p></div>
           </div>
-          <div style="display:flex;align-items:flex-start;gap:0.85rem;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <div><h4>Solidarity</h4><p style="font-size:0.9rem;margin-top:0.3rem;">We rise together — no mother is left behind.</p></div>
+          <div class="value-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div><h4>Solidarity</h4><p>We rise together — no mother is left behind.</p></div>
           </div>
         </div>
       </div>
@@ -200,7 +252,7 @@
       <h2>Jobs &amp; Opportunities</h2>
       <p style="max-width:520px;margin:1rem auto 0;">We are a growing organisation. When opportunities arise, we post them here first — because we believe in hiring from within our community wherever possible.</p>
     </div>
-    <div class="fade-up" style="background:var(--warm-white);padding:3rem;text-align:center;border:1.5px solid rgba(59,35,20,0.1);">
+    <div class="jobs-box fade-up">
       <div style="display:flex;justify-content:center;margin-bottom:1rem;">
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
       </div>

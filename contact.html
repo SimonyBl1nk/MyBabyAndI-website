@@ -5,6 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | My Baby And I</title>
   <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* ── Contact page mobile-first layout ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    @media (min-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+      }
+    }
+
+    .contact-form-box {
+      background: var(--cream);
+      padding: 1.75rem 1.25rem;
+      border: 1.5px solid rgba(59,35,20,0.1);
+    }
+    @media (min-width: 480px) {
+      .contact-form-box {
+        padding: 2.5rem;
+      }
+    }
+
+    .name-fields {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    @media (min-width: 480px) {
+      .name-fields {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 <div id="nav-placeholder"></div>
@@ -17,7 +53,7 @@
 
 <section class="section">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;">
+    <div class="contact-grid">
 
       <!-- Contact Info -->
       <div class="fade-up">
@@ -69,10 +105,10 @@
       </div>
 
       <!-- Contact Form -->
-      <div class="fade-up" style="background:var(--cream);padding:2.5rem;border:1.5px solid rgba(59,35,20,0.1);">
+      <div class="fade-up contact-form-box">
         <h3 style="margin-bottom:1.5rem;">Send Us a Message</h3>
         <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div class="name-fields">
             <div class="form-group">
               <label for="fname">First Name</label>
               <input type="text" name="first_name" id="fname" placeholder="First name" required/>
