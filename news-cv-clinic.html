@@ -120,8 +120,9 @@
     }
     /* Full width single photo */
     .article-figure--full img {
-      max-height: 480px;
-      object-fit: cover;
+      width: 100%;
+      height: auto;
+      object-fit: unset;
     }
     /* Side by side pair */
     .article-figures-row {
@@ -129,10 +130,13 @@
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
       margin-bottom: 0.5rem;
+      align-items: start;
     }
     .article-figures-row .article-figure img {
-      height: 220px;
-      object-fit: cover;
+      width: 100%;
+      height: auto;
+      object-fit: unset;
+      border-radius: 8px;
     }
     /* Shared caption under the pair */
     .article-figure--caption-only figcaption {
@@ -225,10 +229,10 @@
         grid-template-columns: 1fr;
       }
       .article-figures-row .article-figure img {
-        height: 240px;
+        height: auto;
       }
       .article-figure--full img {
-        max-height: 300px;
+        height: auto;
       }
       .article-section--cta {
         padding: 1.5rem 1rem;
