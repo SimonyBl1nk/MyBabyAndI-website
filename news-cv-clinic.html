@@ -9,6 +9,235 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* ── Article page layout ── */
+    .news-article {
+      padding-top: 80px; /* clear fixed nav */
+    }
+
+    .article-hero {
+      background: #3D2B1F;
+      color: #fff;
+      padding: 3rem 1rem 2.5rem;
+    }
+    .article-hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .article-meta-top {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .article-tag {
+      background: #A0735A;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 0.3rem 0.75rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .article-date {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: #C9A882;
+    }
+    .article-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin: 0 0 1rem;
+      color: #fff;
+    }
+    .article-standfirst {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #C9A882;
+      margin: 0;
+    }
+
+    /* ── Article body ── */
+    .article-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2.5rem 1rem 4rem;
+    }
+
+    .article-section {
+      margin-bottom: 2.5rem;
+    }
+    .article-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+      color: #3D2B1F;
+      margin-bottom: 1rem;
+    }
+    .article-section p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #575553;
+      margin-bottom: 1rem;
+    }
+    .article-list {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #575553;
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .article-list li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* ── Figures ── */
+    .article-figure {
+      margin: 0 0 1.5rem;
+    }
+    .article-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    .article-figure figcaption {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      color: #A0735A;
+      font-style: italic;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    /* Full width single photo */
+    .article-figure--full img {
+      max-height: 480px;
+      object-fit: cover;
+    }
+    /* Side by side pair */
+    .article-figures-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .article-figures-row .article-figure img {
+      height: 220px;
+      object-fit: cover;
+    }
+    /* Shared caption under the pair */
+    .article-figure--caption-only figcaption {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    /* Flyer — full height, no cropping */
+    .article-figure--flyer {
+      max-width: 420px;
+      margin: 0 auto 2rem;
+    }
+    .article-figure--flyer img {
+      height: auto;
+      object-fit: unset;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    }
+
+    /* ── Pull quote ── */
+    .article-quote {
+      border-left: 4px solid #A0735A;
+      margin: 2rem 0;
+      padding: 1rem 1.5rem;
+      background: #fdf8f4;
+      border-radius: 0 8px 8px 0;
+    }
+    .article-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: #3D2B1F;
+      margin-bottom: 0.5rem;
+    }
+    .article-quote cite {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: #A0735A;
+      font-style: normal;
+    }
+
+    /* ── CTA section ── */
+    .article-section--cta {
+      background: #fdf8f4;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .article-section--cta h2 {
+      margin-bottom: 0.75rem;
+    }
+    .article-cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.75rem;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.85; }
+    .btn-primary {
+      background: #A0735A;
+      color: #fff;
+    }
+    .btn-outline {
+      border: 2px solid #A0735A;
+      color: #A0735A;
+      background: transparent;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 600px) {
+      .article-hero {
+        padding: 2rem 0 2rem;
+      }
+      .article-hero-inner {
+        padding: 0 1rem;
+      }
+      .article-body {
+        padding: 2rem 1rem 3rem;
+      }
+      .article-figures-row {
+        grid-template-columns: 1fr;
+      }
+      .article-figures-row .article-figure img {
+        height: 240px;
+      }
+      .article-figure--full img {
+        max-height: 300px;
+      }
+      .article-section--cta {
+        padding: 1.5rem 1rem;
+      }
+      .article-quote {
+        padding: 0.75rem 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -20,7 +249,7 @@
   <section class="article-hero">
     <div class="article-hero-inner">
       <div class="article-meta-top">
-        <span class="article-tag">EVENT RECAP</span>
+        <span class="article-tag">Event Recap</span>
         <span class="article-date">21 May 2026</span>
       </div>
       <h1>CV Clinic &amp; NHS / Civil Service Application Support</h1>
