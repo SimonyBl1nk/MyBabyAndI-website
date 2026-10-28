@@ -3,103 +3,265 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Women's Empowerment Workshop | My Baby And I</title>
-  <meta name="description" content="Free Women's Empowerment Workshop — Identity, Motherhood and Wellbeing. Saturday 3 October 2026, Wellness Suite, Lagoon Leisure Centre, Paisley."/>
+  <title>Women's Empowerment Workshop — Identity, Motherhood &amp; Wellbeing | My Baby And I</title>
+  <meta name="description" content="A recap of our inaugural Women's Empowerment Workshop — Identity, Motherhood and Wellbeing — held on 3 October 2026 at The Lagoon Centre, Paisley."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/style.css"/>
   <style>
-    .article-hero { background: var(--deep-brown); padding: 8rem 1.5rem 4rem; text-align: center; }
-    .article-hero h1 { color: var(--cream); max-width: 760px; margin: 0.75rem auto 1rem; }
-    .article-hero .meta { color: var(--sand); font-size: 0.82rem; letter-spacing: 0.08em; }
-    .article-body { max-width: 780px; margin: 0 auto; padding: 3.5rem 1.5rem 4rem; }
-    .article-body p { margin-bottom: 1.2rem; font-size: 1rem; line-height: 1.85; }
-    .article-body h2 { margin: 2.5rem 0 1rem; }
-    .back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 600; color: var(--terracotta); margin-bottom: 2rem; }
-    .event-details { background: var(--cream); border-left: 4px solid var(--terracotta); padding: 1.5rem 1.75rem; margin: 2rem 0; border-radius: 0 4px 4px 0; }
-    .event-details h3 { margin-bottom: 1rem; }
-    .event-detail-row { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.85rem; font-size: 0.95rem; }
-    .event-detail-row svg { flex-shrink: 0; margin-top: 2px; }
-    .sessions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
-    .session-card { background: var(--warm-white); border: 1.5px solid rgba(59,35,20,0.1); padding: 1.25rem; border-radius: 2px; }
-    .session-card h4 { font-size: 0.95rem; margin-bottom: 0.4rem; color: var(--deep-brown); }
-    .session-card p { font-size: 0.85rem; color: #666; margin: 0; }
-    .flyer-wrap { display: flex; justify-content: center; margin: 2.5rem 0; }
-    .flyer-wrap img { max-width: 400px; width: 100%; border-radius: 4px; box-shadow: 0 8px 32px rgba(59,35,20,0.15); }
-    @media(max-width:600px) { .sessions-grid { grid-template-columns: 1fr; } }
+    .news-article { padding-top: 80px; }
+
+    .article-hero {
+      background: #3D2B1F;
+      color: #fff;
+      padding: 3rem 1rem 2.5rem;
+    }
+    .article-hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .article-meta-top {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .article-tag {
+      background: #A0735A;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 0.3rem 0.75rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .article-date {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: #C9A882;
+    }
+    .article-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin: 0 0 1rem;
+      color: #fff;
+    }
+    .article-standfirst {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #C9A882;
+      margin: 0;
+    }
+
+    .article-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2.5rem 1rem 4rem;
+    }
+    .article-section { margin-bottom: 2.5rem; }
+    .article-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+      color: #3D2B1F;
+      margin-bottom: 1rem;
+    }
+    .article-section p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #575553;
+      margin-bottom: 1rem;
+    }
+    .article-list {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #575553;
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .article-list li { margin-bottom: 0.4rem; }
+
+    .article-figure { margin: 0 0 1.5rem; }
+    .article-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      object-fit: unset;
+    }
+    .article-figure figcaption {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      color: #A0735A;
+      font-style: italic;
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    .article-figures-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+      align-items: start;
+    }
+    .article-figures-row .article-figure img {
+      width: 100%;
+      height: auto;
+      object-fit: unset;
+      border-radius: 8px;
+    }
+    .article-figure--caption-only figcaption {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .article-quote {
+      border-left: 4px solid #A0735A;
+      margin: 2rem 0;
+      padding: 1rem 1.5rem;
+      background: #fdf8f4;
+      border-radius: 0 8px 8px 0;
+    }
+    .article-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: #3D2B1F;
+      margin-bottom: 0.5rem;
+    }
+    .article-quote cite {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: #A0735A;
+      font-style: normal;
+    }
+
+    .article-section--cta {
+      background: #fdf8f4;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .article-section--cta h2 { margin-bottom: 0.75rem; }
+    .article-cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.75rem;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.85; }
+    .btn-primary { background: #A0735A; color: #fff; }
+    .btn-outline { border: 2px solid #A0735A; color: #A0735A; background: transparent; }
+
+    @media (max-width: 600px) {
+      .article-hero { padding: 2rem 0 2rem; }
+      .article-hero-inner { padding: 0 1rem; }
+      .article-body { padding: 2rem 1rem 3rem; }
+      .article-figures-row { grid-template-columns: 1fr; }
+      .article-section--cta { padding: 1.5rem 1rem; }
+      .article-quote { padding: 0.75rem 1rem; }
+    }
   </style>
 </head>
 <body>
-<div id="nav-placeholder"></div>
 
-<div class="article-hero">
-  <span class="eyebrow" style="color:var(--sand);">Upcoming · Empowerment</span>
-  <h1>Free Women's Empowerment Workshop</h1>
-  <div class="meta">Saturday, 3 October 2026 · Lagoon Leisure Centre, Paisley</div>
-</div>
-
-<div class="article-body">
-  <a href="news.html" class="back-link">← Back to News</a>
-
-  <p>My Baby And I is thrilled to announce our <strong>Women's Empowerment Workshop</strong> series — a powerful programme of in-person sessions and webinars designed to uplift and empower women across every area of their lives.</p>
-
-  <p>The programme launches with an inspiring in-person session on <strong>Identity, Motherhood and Wellbeing</strong> on <strong>Saturday 3 October 2026</strong>, with sessions continuing throughout the year and through to <strong>August 2027</strong>.</p>
-
-  <div class="event-details">
-    <h3>Session 1 — Identity, Motherhood &amp; Wellbeing</h3>
-    <div class="event-detail-row">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-      <strong>Saturday, 3 October 2026 at 1:00PM</strong>
-    </div>
-    <div class="event-detail-row">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      <span>Wellness Suite, Lagoon Leisure Centre, 11 Christie St, Paisley PA1 1NB</span>
-    </div>
-    <div class="event-detail-row">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-      <span><strong>Free to attend</strong> · Free childminder available · All women welcome</span>
-    </div>
-    <div class="event-detail-row">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      <span>Facilitated by <strong>Awo Agnes Iyogun</strong></span>
-    </div>
-    <div style="margin-top:0.5rem;padding:0.75rem;background:var(--light-sage);border-radius:2px;font-size:0.85rem;">
-      Supported by the <strong>National Lottery Community Fund</strong> and <strong>OneRen</strong>
-    </div>
-  </div>
-
-  <h2>About the workshop series</h2>
-  <p>This is not just a one-off event — it's the beginning of a year-long journey of growth, learning and community. The full programme includes a mix of in-person workshops and online webinars covering:</p>
-
-  <div class="sessions-grid">
-    <div class="session-card"><h4>💪 Confidence &amp; Wellbeing</h4><p>Rebuilding self-belief and personal strength</p></div>
-    <div class="session-card"><h4>👶 Navigating Motherhood</h4><p>Support, identity and thriving as a mother</p></div>
-    <div class="session-card"><h4>📋 Employability &amp; CV Clinic</h4><p>Job applications, interview prep &amp; LinkedIn</p></div>
-    <div class="session-card"><h4>💰 Financial Literacy</h4><p>Managing money and planning for the future</p></div>
-    <div class="session-card"><h4>🤖 AI &amp; Digital Skills</h4><p>AI tools, Excel, PowerPoint &amp; presentations</p></div>
-    <div class="session-card"><h4>✨ Brand Visibility</h4><p>Building your profile and personal brand</p></div>
-  </div>
-
-  <h2>The flyers</h2>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0;">
-    <div class="flyer-wrap" style="margin:0;">
-      <img src="images/images/events/empowerment-workshop-flyer.jpg" alt="Women's Empowerment Workshop — Identity, Motherhood and Wellbeing flyer"/>
-    </div>
-    <div class="flyer-wrap" style="margin:0;">
-      <img src="images/images/events/empowerment-training-flyer.jpg" alt="Free Empowerment Training programme flyer"/>
-    </div>
-  </div>
-
-  <h2>Register now</h2>
-  <p>Spaces are limited. Scan the QR code on the flyer or contact us directly to register your place. Free childminding is available — please let us know when registering if you'll need it.</p>
-
-  <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;">
-    <a href="contact.html?subject=Empowerment Workshop Registration" class="btn btn--primary">Register via Contact Form</a>
-    <a href="get-involved.html#events" class="btn btn--dark">All Events</a>
-  </div>
-</div>
-
-<section style="background:var(--deep-brown);padding:2rem 1.5rem;text-align:center;"><p style="color:rgba(247,243,239,0.55);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1rem;">Follow Our Community</p><div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;"><a href="https://www.facebook.com/mybabyandiUK" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.5rem;color:var(--sand);font-size:0.9rem;font-weight:500;"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>@mybabyandiUK</a><a href="https://www.instagram.com/mybabyandi_uk" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.5rem;color:var(--sand);font-size:0.9rem;font-weight:500;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>@mybabyandi_uk</a></div></section>
-<div id="footer-placeholder"></div>
 <script src="js/components.js"></script>
-<script src="js/main.js"></script>
+
+<main class="news-article">
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <div class="article-meta-top">
+        <span class="article-tag">Event Recap</span>
+        <span class="article-date">3 October 2026</span>
+      </div>
+      <h1>Women's Empowerment Workshop — Identity, Motherhood &amp; Wellbeing</h1>
+      <p class="article-standfirst">Our inaugural empowerment workshop brought together mothers from across Renfrewshire for an inspiring session on identity, motherhood and wellbeing — the first in a year-long series running through to August 2027.</p>
+    </div>
+  </section>
+
+  <article class="article-body">
+
+    <section class="article-section">
+      <h2>On the day</h2>
+      <p>On Saturday 3 October, women from across Glasgow and Renfrewshire gathered at the Wellness Suite, Lagoon Leisure Centre, Paisley, for our very first Women's Empowerment Workshop. Facilitated by our founder and two inspiring guest speakers, the session created a warm and honest space for mothers to explore who they are beyond the role of "mum" — their identity, their wellbeing, and the strength they carry every day.</p>
+      <p>Free childminding was provided so that no mother had to choose between attending and caring for her children. The turnout was wonderful, and the energy in the room was something we will not forget.</p>
+    </section>
+
+    <!-- Full width group photo -->
+    <figure class="article-figure">
+      <img src="images/images/events/empowerment-group.jpg" alt="Attendees at the My Baby And I Women's Empowerment Workshop, Lagoon Centre, Paisley, October 2026"/>
+      <figcaption>Attendees at the Women's Empowerment Workshop — Lagoon Leisure Centre, Paisley, 3 October 2026</figcaption>
+    </figure>
+
+    <section class="article-section">
+      <h2>What we explored</h2>
+      <ul class="article-list">
+        <li>Identity — who are you beyond being a mother?</li>
+        <li>Motherhood — sharing experiences across cultures and backgrounds</li>
+        <li>Wellbeing — practical tools for looking after yourself</li>
+        <li>Community — building sisterhood and peer support</li>
+        <li>Goal setting — looking ahead with confidence</li>
+      </ul>
+      <p>This workshop is the first in a year-long series of workshops and webinars running through to August 2027, supported by the National Lottery Community Fund and OneRen. Each session is completely free to attend.</p>
+    </section>
+
+    <!-- Side by side: team photo + speakers -->
+    <div class="article-figures-row">
+      <figure class="article-figure">
+        <img src="images/images/events/empowerment-team.jpg" alt="My Baby And I team members and community at the Women's Empowerment Workshop"/>
+        <figcaption>Community members with our founder at the workshop</figcaption>
+      </figure>
+      <figure class="article-figure">
+        <img src="images/images/events/empowerment-speakers.jpg" alt="Founder and guest speakers at the My Baby And I Women's Empowerment Workshop"/>
+        <figcaption>Our founder with guest speakers on the day</figcaption>
+      </figure>
+    </div>
+    <figure class="article-figure article-figure--caption-only">
+      <figcaption>My Baby And I community at the Women's Empowerment Workshop, 3 October 2026</figcaption>
+    </figure>
+
+    <section class="article-section">
+      <h2>Why this matters</h2>
+      <p>For many of the women in our community, the pressures of motherhood — combined with the experience of settling in Scotland and navigating a new culture — can leave little room for self-reflection or personal growth. This workshop gave our members dedicated time and space to reconnect with themselves, in the company of women who truly understand.</p>
+      <blockquote class="article-quote">
+        <p>"It felt so good to just be seen as a woman, not just a mum. I left feeling stronger and more connected to this community."</p>
+        <cite>— Attendee, Women's Empowerment Workshop, October 2026</cite>
+      </blockquote>
+    </section>
+
+    <section class="article-section article-section--cta">
+      <h2>Join us at the next session</h2>
+      <p>This is just the beginning. We have a full calendar of free workshops and webinars ahead — on employability, wellbeing, identity and more. All sessions are <strong>completely free</strong> and designed around the real lives of the women in our community.</p>
+      <div class="article-cta-buttons">
+        <a href="news.html" class="btn btn-primary">See all events</a>
+        <a href="contact.html" class="btn btn-outline">Get in touch</a>
+      </div>
+    </section>
+
+  </article>
+
+</main>
+
 </body>
 </html>

@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>News | My Baby And I</title>
   <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    @media(max-width:700px){
+      .featured-event-grid{grid-template-columns:1fr !important;}
+      .featured-event-text{padding:1.5rem 1.5rem 2rem !important;}
+    }
+  </style>
 </head>
 <body>
 <div id="nav-placeholder"></div>
@@ -18,17 +24,45 @@
 <section class="section">
   <div class="container">
 
-    <!-- FEATURED: Empowerment Workshop (upcoming) -->
+    <!-- FEATURED: CV Clinic 31 Oct (upcoming) -->
     <div class="fade-up" style="margin-bottom:3.5rem;">
       <span style="display:inline-block;background:var(--terracotta);color:var(--cream);font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.75rem;margin-bottom:1.25rem;">🗓 Upcoming Event</span>
-      <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:2.5rem;align-items:start;background:var(--deep-brown);border-radius:4px;overflow:hidden;">
-        <!-- Flyer shown full height, no cropping -->
-        <img src="images/images/events/empowerment-workshop-flyer.jpg"
-             alt="Women's Empowerment Workshop flyer"
+      <div class="featured-event-grid" style="display:grid;grid-template-columns:1fr 1.4fr;gap:0;align-items:start;background:var(--deep-brown);border-radius:4px;overflow:hidden;">
+        <img src="images/images/events/cv-clinic-oct31-flyer.png"
+             alt="CV Clinic and Civil Service Application Support — 31 October 2026"
              style="width:100%;height:auto;display:block;"/>
-        <div style="padding:2.5rem 2.5rem 2.5rem 0;display:flex;flex-direction:column;justify-content:center;">
+        <div class="featured-event-text" style="padding:2.5rem 2.5rem 2.5rem 2rem;display:flex;flex-direction:column;justify-content:center;">
+          <h2 style="color:var(--cream);margin-bottom:1rem;">CV Clinic &amp; Civil Service Application Support</h2>
+          <p style="color:rgba(247,243,239,0.82);line-height:1.75;">A free, face-to-face session helping ethnic minority mothers build stronger CVs and navigate Civil Service applications. Supported by OneRen and the National Lottery Community Fund.</p>
+          <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:0.65rem;">
+            <div style="display:flex;align-items:center;gap:0.6rem;color:var(--sand);font-size:0.88rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <strong>Friday, 31 October 2026 · 11:00am – 2:00pm</strong>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.6rem;color:var(--sand);font-size:0.88rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              One Ren, 11 Christie St, Paisley PA1 1NB
+            </div>
+            <div style="display:flex;align-items:center;gap:0.6rem;color:var(--sand);font-size:0.88rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              Free to attend
+            </div>
+          </div>
+          <a href="news-cv-clinic-oct2026.html" class="btn btn--primary" style="margin-top:2rem;display:inline-block;width:fit-content;">Full Details &amp; Register →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FEATURED: Empowerment Workshop (recap) -->
+    <div class="fade-up" style="margin-bottom:3.5rem;">
+      <span style="display:inline-block;background:#5A7A4A;color:var(--cream);font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.75rem;margin-bottom:1.25rem;">📷 Event Recap</span>
+      <div class="featured-event-grid" style="display:grid;grid-template-columns:1fr 1.4fr;gap:0;align-items:start;background:var(--deep-brown);border-radius:4px;overflow:hidden;">
+        <img src="images/images/events/empowerment-group.jpg"
+             alt="Attendees at the Women's Empowerment Workshop, Lagoon Centre, Paisley, 3 October 2026"
+             style="width:100%;height:auto;display:block;"/>
+        <div class="featured-event-text" style="padding:2.5rem 2.5rem 2.5rem 2rem;display:flex;flex-direction:column;justify-content:center;">
           <h2 style="color:var(--cream);margin-bottom:1rem;">Women's Empowerment Workshop</h2>
-          <p style="color:rgba(247,243,239,0.82);line-height:1.75;">An inspiring session exploring <strong style="color:var(--sand);">Identity, Motherhood and Wellbeing</strong> — the first in a year-long series of workshops and webinars running through to August 2027. Free to attend, free childminder available.</p>
+          <p style="color:rgba(247,243,239,0.82);line-height:1.75;">An inspiring session exploring <strong style="color:var(--sand);">Identity, Motherhood and Wellbeing</strong> — the first in a year-long series of workshops and webinars running through to August 2027.</p>
           <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:0.65rem;">
             <div style="display:flex;align-items:center;gap:0.6rem;color:var(--sand);font-size:0.88rem;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -38,25 +72,29 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               Wellness Suite, Lagoon Leisure Centre, Paisley
             </div>
-            <div style="display:flex;align-items:center;gap:0.6rem;color:var(--sand);font-size:0.88rem;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-              Free · Free childminder available
-            </div>
           </div>
-          <a href="news-empowerment-workshop.html" class="btn btn--primary" style="margin-top:2rem;display:inline-block;width:fit-content;">Full Details &amp; Register →</a>
+          <a href="news-empowerment-workshop.html" class="btn btn--primary" style="margin-top:2rem;display:inline-block;width:fit-content;">See photos &amp; recap →</a>
         </div>
       </div>
-      <!-- Mobile: stack vertically -->
-      <style>
-        @media(max-width:700px){
-          .featured-event-grid{grid-template-columns:1fr !important;}
-          .featured-event-text{padding:1.5rem !important;}
-        }
-      </style>
     </div>
 
     <!-- News Grid -->
     <div class="cards">
+
+      <!-- NEW: Empowerment Workshop card -->
+      <div class="card fade-up">
+        <div class="card__img">
+          <img src="images/images/events/empowerment-speakers.jpg" alt="Founder and guest speakers at the Women's Empowerment Workshop"/>
+        </div>
+        <div class="card__body">
+          <span class="card__tag">Empowerment</span>
+          <h3>Women's Empowerment Workshop Recap</h3>
+          <p>Our inaugural Identity, Motherhood &amp; Wellbeing session brought together a wonderful community of mothers in Paisley.</p>
+          <p style="font-size:0.78rem;color:#888;margin-top:0.5rem;">3 October 2026</p>
+          <a href="news-empowerment-workshop.html" class="card__link">Read more</a>
+        </div>
+      </div>
+
       <div class="card fade-up">
         <div class="card__img">
           <img src="images/images/events/summer-party-group-large.jpg" alt="Summer party at Barshaw Park"/>
@@ -69,6 +107,7 @@
           <a href="news-summer-party.html" class="card__link">Read more</a>
         </div>
       </div>
+
       <div class="card fade-up">
         <div class="card__img">
           <img src="images/images/events/cv-clinic-session.jpg" alt="CV Clinic session"/>
@@ -81,6 +120,7 @@
           <a href="news-cv-clinic.html" class="card__link">Read more</a>
         </div>
       </div>
+
       <div class="card fade-up">
         <div class="card__img" style="background:linear-gradient(135deg,var(--olive),var(--sage));display:flex;align-items:center;justify-content:center;">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--warm-white)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -93,6 +133,7 @@
           <a href="#" class="card__link">Read more</a>
         </div>
       </div>
+
       <div class="card fade-up">
         <div class="card__img" style="background:linear-gradient(135deg,var(--terracotta),var(--deep-brown));display:flex;align-items:center;justify-content:center;">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--warm-white)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -105,6 +146,7 @@
           <a href="#" class="card__link">Read more</a>
         </div>
       </div>
+
       <div class="card fade-up">
         <div class="card__img" style="background:linear-gradient(135deg,var(--sand),var(--terracotta));display:flex;align-items:center;justify-content:center;">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--warm-white)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -117,6 +159,7 @@
           <a href="#" class="card__link">Read more</a>
         </div>
       </div>
+
       <div class="card fade-up">
         <div class="card__img" style="background:linear-gradient(135deg,var(--deep-brown),#5a3825);display:flex;align-items:center;justify-content:center;">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--warm-white)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
@@ -129,6 +172,7 @@
           <a href="#" class="card__link">Read more</a>
         </div>
       </div>
+
     </div>
   </div>
 </section>
