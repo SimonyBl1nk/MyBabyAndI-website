@@ -5,295 +5,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CV Clinic &amp; Civil Service Application Support — 31 Oct 2026 | My Baby And I</title>
   <meta name="description" content="Join us on 31 October 2026 for a free CV Clinic and Civil Service Application Support session at One Ren, Paisley. Free to attend, supported by the National Lottery Community Fund."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/style.css"/>
   <style>
-    .news-article { padding-top: 80px; }
-
-    .article-hero {
-      background: #3D2B1F;
-      color: #fff;
-      padding: 3rem 1rem 2.5rem;
-    }
-    .article-hero-inner {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-    .article-meta-top {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
-      flex-wrap: wrap;
-    }
-    .article-tag {
-      background: #A0735A;
-      color: #fff;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      padding: 0.3rem 0.75rem;
-      border-radius: 4px;
-      text-transform: uppercase;
-    }
-    .article-tag--upcoming {
-      background: #5A7A4A;
-    }
-    .article-date {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.85rem;
-      color: #C9A882;
-    }
-    .article-hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 5vw, 2.8rem);
-      font-weight: 800;
-      line-height: 1.15;
-      margin: 0 0 1rem;
-      color: #fff;
-    }
-    .article-standfirst {
-      font-family: 'Inter', sans-serif;
-      font-size: 1.05rem;
-      line-height: 1.6;
-      color: #C9A882;
-      margin: 0;
-    }
-
-    .article-body {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 2.5rem 1rem 4rem;
-    }
-    .article-section { margin-bottom: 2.5rem; }
-    .article-section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.4rem, 3.5vw, 1.9rem);
-      color: #3D2B1F;
-      margin-bottom: 1rem;
-    }
-    .article-section p {
-      font-family: 'Inter', sans-serif;
-      font-size: 1rem;
-      line-height: 1.75;
-      color: #575553;
-      margin-bottom: 1rem;
-    }
-    .article-list {
-      font-family: 'Inter', sans-serif;
-      font-size: 1rem;
-      line-height: 1.75;
-      color: #575553;
-      padding-left: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .article-list li { margin-bottom: 0.4rem; }
-
-    /* Event details card */
-    .event-details-card {
-      background: #fdf8f4;
-      border: 1.5px solid rgba(160,115,90,0.25);
-      border-radius: 12px;
-      padding: 1.75rem;
-      margin-bottom: 2.5rem;
-    }
-    .event-details-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      color: #3D2B1F;
-      margin-bottom: 1.25rem;
-    }
-    .event-detail-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-    .event-detail-row:last-child { margin-bottom: 0; }
-    .event-detail-icon {
-      flex-shrink: 0;
-      width: 36px;
-      height: 36px;
-      background: #fff;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(160,115,90,0.2);
-    }
-    .event-detail-text {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
-      color: #3D2B1F;
-      padding-top: 0.45rem;
-    }
-    .event-detail-text strong { display: block; font-weight: 600; }
-    .event-detail-text span { color: #575553; font-size: 0.87rem; }
-
-    /* Flyer */
-    .article-figure--flyer {
-      max-width: 420px;
-      margin: 0 auto 2rem;
-    }
-    .article-figure--flyer img {
-      width: 100%;
-      height: auto;
-      object-fit: unset;
-      border-radius: 8px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-    }
-    .article-figure--flyer figcaption {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.82rem;
-      color: #A0735A;
-      font-style: italic;
-      margin-top: 0.5rem;
-      text-align: center;
-    }
-
-    .article-section--cta {
-      background: #fdf8f4;
-      padding: 2rem;
-      border-radius: 12px;
-      text-align: center;
-    }
-    .article-section--cta h2 { margin-bottom: 0.75rem; }
-    .article-cta-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 1.5rem;
-    }
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.75rem;
-      border-radius: 6px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-    .btn:hover { opacity: 0.85; }
-    .btn-primary { background: #A0735A; color: #fff; }
-    .btn-outline { border: 2px solid #A0735A; color: #A0735A; background: transparent; }
-
-    @media (max-width: 600px) {
-      .article-hero { padding: 2rem 0 2rem; }
-      .article-hero-inner { padding: 0 1rem; }
-      .article-body { padding: 2rem 1rem 3rem; }
-      .event-details-card { padding: 1.25rem; }
-      .article-section--cta { padding: 1.5rem 1rem; }
+    .article-hero { background: var(--deep-brown); padding: 8rem 1.5rem 4rem; text-align: center; }
+    .article-hero h1 { color: var(--cream); max-width: 760px; margin: 0.75rem auto 1rem; }
+    .article-hero .meta { color: var(--sand); font-size: 0.82rem; letter-spacing: 0.08em; }
+    .article-body { max-width: 780px; margin: 0 auto; padding: 3.5rem 1.5rem 4rem; }
+    .article-body p { margin-bottom: 1.2rem; font-size: 1rem; line-height: 1.85; }
+    .article-body h2 { margin: 2.5rem 0 1rem; }
+    .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2.5rem 0; }
+    .photo-grid img { width: 100%; border-radius: 2px; object-fit: cover; height: 280px; display: block; }
+    .photo-grid img.full { grid-column: 1 / -1; height: 400px; object-position: center 30%; }
+    .photo-caption { font-size: 0.78rem; color: #888; text-align: center; margin-top: -0.5rem; margin-bottom: 1.5rem; font-style: italic; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 600; color: var(--terracotta); margin-bottom: 2rem; }
+    .event-card { background: #fdf8f4; border: 1.5px solid rgba(160,115,90,0.25); border-radius: 12px; padding: 1.75rem; margin: 2rem 0; }
+    .event-card h3 { color: var(--deep-brown); margin-bottom: 1.25rem; font-size: 1.2rem; }
+    .event-row { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; }
+    .event-row:last-child { margin-bottom: 0; }
+    .event-icon { flex-shrink: 0; width: 36px; height: 36px; background: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(160,115,90,0.2); }
+    .event-text { font-size: 0.95rem; color: var(--deep-brown); padding-top: 0.45rem; }
+    .event-text strong { display: block; font-weight: 600; }
+    .event-text span { color: #575553; font-size: 0.87rem; }
+    @media(max-width:600px) {
+      .photo-grid { grid-template-columns: 1fr; }
+      .photo-grid img.full, .photo-grid img { height: 240px; }
+      .event-card { padding: 1.25rem; }
     }
   </style>
 </head>
 <body>
+<div id="nav-placeholder"></div>
 
-<script src="js/components.js"></script>
+<div class="article-hero">
+  <span class="eyebrow" style="color:var(--sand);">Upcoming Event · Employment</span>
+  <h1>CV Clinic &amp; Civil Service Application Support</h1>
+  <div class="meta">31 October 2026 &nbsp;·&nbsp; One Ren, Paisley &nbsp;·&nbsp; Free to Attend</div>
+</div>
 
-<main class="news-article">
+<div class="article-body">
+  <a href="news.html" class="back-link">← Back to News</a>
 
-  <!-- Breadcrumb back nav -->
-  <div style="background:#fff;border-bottom:1px solid rgba(59,35,20,0.08);padding:0.75rem 1rem;">
-    <div style="max-width:760px;margin:0 auto;">
-      <a href="news.html" style="display:inline-flex;align-items:center;gap:0.4rem;color:#A0735A;font-family:'Inter',sans-serif;font-size:0.88rem;font-weight:500;text-decoration:none;">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-        Back to News &amp; Events
-      </a>
+  <p>Following the success of our <strong>May 2026 CV Clinic</strong>, we're back with another free, practical session designed to help ethnic minority mothers take confident steps into employment. This session focuses on CV writing and Civil Service application support — two areas where the right guidance can make all the difference.</p>
+
+  <p>Whether you are looking for your first job in Scotland, returning to work after having children, or ready for a new challenge, this session is for you.</p>
+
+  <div class="event-card">
+    <h3>Event Details</h3>
+
+    <div class="event-row">
+      <div class="event-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A0735A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      </div>
+      <div class="event-text">
+        <strong>Friday 31 October 2026</strong>
+        <span>11:00am – 2:00pm</span>
+      </div>
+    </div>
+
+    <div class="event-row">
+      <div class="event-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A0735A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div class="event-text">
+        <strong>One Ren, 11 Christie St, Paisley PA1 1NB</strong>
+        <span>Renfrewshire</span>
+      </div>
+    </div>
+
+    <div class="event-row">
+      <div class="event-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A0735A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+      <div class="event-text">
+        <strong>Free to attend</strong>
+        <span>Supported by OneRen and the National Lottery Community Fund</span>
+      </div>
     </div>
   </div>
 
-  <section class="article-hero">
-    <div class="article-hero-inner">
-      <div class="article-meta-top">
-        <span class="article-tag article-tag--upcoming">Upcoming Event</span>
-        <span class="article-date">31 October 2026</span>
-      </div>
-      <h1>CV Clinic &amp; Civil Service Application Support</h1>
-      <p class="article-standfirst">A free, face-to-face session helping ethnic minority mothers build stronger CVs and navigate Civil Service applications — at One Ren, Paisley, on Friday 31 October, 11am–2pm.</p>
-    </div>
-  </section>
+  <h2>What's covered</h2>
+  <p>This session is practical and hands-on. You will leave with a stronger CV and a clearer understanding of how to complete Civil Service applications with confidence.</p>
 
-  <article class="article-body">
+  <ul style="padding-left:1.5rem;margin-bottom:1.5rem;line-height:1.85;">
+    <li>Building and strengthening your CV for UK employers</li>
+    <li>Understanding and completing Civil Service application forms</li>
+    <li>Writing competency-based personal statements</li>
+    <li>One-to-one CV review and feedback</li>
+    <li>Tips for interviews and building confidence</li>
+  </ul>
 
-    <!-- Event details card -->
-    <div class="event-details-card">
-      <h3>Event Details</h3>
+  <h2>Save the date</h2>
+  <div style="max-width:420px;margin:0 auto 2rem;">
+    <img src="images/images/events/cv-clinic-oct31-flyer.png" alt="My Baby And I CV Clinic and Civil Service Application Support — Friday 31 October 2026, 11am–2pm, One Ren, Paisley" style="width:100%;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.12);"/>
+    <p class="photo-caption" style="margin-top:0.5rem;">CV Clinic &amp; Civil Service Application Support — 31 October 2026, One Ren, Paisley</p>
+  </div>
 
-      <div class="event-detail-row">
-        <div class="event-detail-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A0735A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        </div>
-        <div class="event-detail-text">
-          <strong>Friday 31 October 2026</strong>
-          <span>11:00am – 2:00pm</span>
-        </div>
-      </div>
+  <h2>Register now — it's free</h2>
+  <p>Spaces are limited. Contact us to register your place or to find out more about this session and our upcoming programme of workshops and webinars running through to August 2027.</p>
 
-      <div class="event-detail-row">
-        <div class="event-detail-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A0735A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <div class="event-detail-text">
-          <strong>One Ren, 11 Christie St, Paisley PA1 1NB</strong>
-          <span>Renfrewshire</span>
-        </div>
-      </div>
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem;">
+    <a href="contact.html" class="btn btn--primary">Register Your Place →</a>
+    <a href="news.html" class="btn btn--dark">See All Events</a>
+  </div>
+</div>
 
-      <div class="event-detail-row">
-        <div class="event-detail-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A0735A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </div>
-        <div class="event-detail-text">
-          <strong>Free to attend</strong>
-          <span>Supported by OneRen and the National Lottery Community Fund</span>
-        </div>
-      </div>
-    </div>
-
-    <section class="article-section">
-      <h2>About this session</h2>
-      <p>Following the success of our May 2026 CV Clinic, we're back with another free, practical session designed to help ethnic minority mothers take confident steps into employment. This session focuses on CV writing and Civil Service application support — two areas where the right guidance can make all the difference.</p>
-      <p>Whether you are looking for your first job in Scotland, returning to work after having children, or ready for a new challenge, this session is for you.</p>
-    </section>
-
-    <section class="article-section">
-      <h2>What's covered</h2>
-      <ul class="article-list">
-        <li>Building and strengthening your CV for UK employers</li>
-        <li>Understanding and completing Civil Service application forms</li>
-        <li>Writing competency-based personal statements</li>
-        <li>One-to-one CV review and feedback</li>
-        <li>Tips for interviews and building confidence</li>
-      </ul>
-    </section>
-
-    <!-- Flyer -->
-    <section class="article-section">
-      <h2>Save the date</h2>
-      <figure class="article-figure--flyer">
-        <img src="images/images/events/cv-clinic-oct31-flyer.png" alt="My Baby And I CV Clinic and Civil Service Application Support — Friday 31 October 2026, 11am–2pm, One Ren, Paisley"/>
-        <figcaption>CV Clinic &amp; Civil Service Application Support — 31 October 2026</figcaption>
-      </figure>
-    </section>
-
-    <section class="article-section article-section--cta">
-      <h2>Register now — it's free</h2>
-      <p>Spaces are limited. Contact us to register your place or to find out more about this session and our upcoming programme.</p>
-      <div class="article-cta-buttons">
-        <a href="contact.html" class="btn btn-primary">Register your place →</a>
-        <a href="news.html" class="btn btn-outline">See all events</a>
-      </div>
-    </section>
-
-  </article>
-
-</main>
-
+<section style="background:var(--deep-brown);padding:2rem 1.5rem;text-align:center;"><p style="color:rgba(247,243,239,0.55);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1rem;">Follow Our Community</p><div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;"><a href="https://www.facebook.com/mybabyandiUK" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.5rem;color:var(--sand);font-size:0.9rem;font-weight:500;"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>@mybabyandiUK</a><a href="https://www.instagram.com/mybabyandi_uk" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.5rem;color:var(--sand);font-size:0.9rem;font-weight:500;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>@mybabyandi_uk</a></div></section>
+<div id="footer-placeholder"></div>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
